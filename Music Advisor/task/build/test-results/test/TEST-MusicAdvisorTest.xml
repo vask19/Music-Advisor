@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="MusicAdvisorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-09-04T16:19:12" hostname="HOME-PC" time="0.116">
+  <properties/>
+  <testcase name="start" classname="MusicAdvisorTest" time="0.116"/>
+  <system-out><![CDATA[?[1;31m
+Start test 1?[0m
+---NEW RELEASES---
+Mountains [Sia, Diplo, Labrinth]
+Runaway [Lil Peep]
+The Greatest Show [Panic! At The Disco]
+All Out Life [Slipknot]
+---FEATURED---
+Mellow Morning
+Wake Up and Smell the Coffee
+Monday Motivation
+Songs to Sing in the Shower
+---CATEGORIES---
+Top Lists
+Pop
+Mood
+Latin
+---MOOD PLAYLISTS---
+Walk Like A Badass  
+Rage Beats  
+Arab Mood Booster  
+Sunday Stroll
+---GOODBYE!---
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
