@@ -303,6 +303,174 @@ files:
         }
     }
   learner_created: false
+- name: src/advisor/MusicAdvisor.java
+  visible: true
+  text: |
+    package advisor;
+
+    public class MusicAdvisor implements Advisor{
+
+        @Override
+        public String newAlbums() {
+            return "---NEW RELEASES---\n" +
+                    "Mountains [Sia, Diplo, Labrinth]\n" +
+                    "Runaway [Lil Peep]\n" +
+                    "The Greatest Show [Panic! At The Disco]\n" +
+                    "All Out Life [Slipknot]";
+        }
+
+        @Override
+        public String featured() {
+            return "---FEATURED---\n" +
+                    "Mellow Morning\n" +
+                    "Wake Up and Smell the Coffee\n" +
+                    "Monday Motivation\n" +
+                    "Songs to Sing in the Shower";
+        }
+
+        @Override
+        public String categories() {
+            return "---CATEGORIES---\n" +
+                    "Top Lists\n" +
+                    "Pop\n" +
+                    "Mood\n" +
+                    "Latin";
+        }
+
+        @Override
+        public String playlists(String nameOfCategory) {
+            return "---MOOD PLAYLISTS---\n" +
+                    "Walk Like A Badass  \n" +
+                    "Rage Beats  \n" +
+                    "Arab Mood Booster  \n" +
+                    "Sunday Stroll";
+        }
+
+        @Override
+        public String exit() {
+            return "---GOODBYE!---";
+        }
+    }
+  learner_created: true
+- name: src/advisor/AuthMusicAdvisorDecorator.java
+  visible: true
+  text: |
+    package advisor;
+
+    public class AuthMusicAdvisorDecorator extends MusicAdvisorDecorator{
+        private boolean ifAuth = false;
+        private final String redirect_uri = "https://accounts.spotify.com/authorize?client_id=55baa53664b8400995154bb8f972fa92&redirect_uri=http://localhost:8080&response_type=code";
+
+        private final String MESSAGE_IF_NOT_AUTH = "Please, provide access for application.";
+            public AuthMusicAdvisorDecorator(Advisor advisor) {
+            super(advisor);
+        }
+        public boolean auth(){
+            System.out.println(redirect_uri);
+            System.out.println("---SUCCESS---");
+            ifAuth = true;
+            return true;
+        }
+
+        @Override
+        public String newAlbums() {
+            if (ifAuth){
+                return super.newAlbums();
+            }
+            else return MESSAGE_IF_NOT_AUTH;
+
+
+
+        }
+
+        @Override
+        public String featured() {
+            if (ifAuth){
+                return super.featured();
+            }
+            else return MESSAGE_IF_NOT_AUTH;
+        }
+
+        @Override
+        public String categories() {
+            if (ifAuth){
+                return super.categories();
+            }
+            else return MESSAGE_IF_NOT_AUTH;
+        }
+
+        @Override
+        public String playlists(String nameOfCategory) {
+            if (ifAuth){
+                return super.playlists(nameOfCategory);
+            }
+            else return MESSAGE_IF_NOT_AUTH;
+        }
+
+        @Override
+        public String exit() {
+            return super.exit();
+        }
+
+
+    }
+  learner_created: true
+- name: src/advisor/Advisor.java
+  visible: true
+  text: |
+    package advisor;
+
+    public interface Advisor {
+         String newAlbums();
+         String featured();
+         String categories();
+         String playlists(String nameOfCategory);
+         String exit();
+    }
+  learner_created: true
+- name: src/advisor/MusicAdvisorDecorator.java
+  visible: true
+  text: |
+    package advisor;
+
+    public class MusicAdvisorDecorator implements Advisor{
+        private Advisor advisor;
+
+        public MusicAdvisorDecorator(Advisor advisor){
+            this.advisor = advisor;
+        }
+        @Override
+        public String newAlbums() {
+            return advisor.newAlbums();
+        }
+
+        @Override
+        public String featured() {
+            return advisor.featured();
+        }
+
+        @Override
+        public String categories() {
+            return advisor.categories();
+        }
+
+        @Override
+        public String playlists(String nameOfCategory) {
+            return advisor.playlists(nameOfCategory);
+        }
+
+        @Override
+        public String exit() {
+            return advisor.exit();
+        }
+    }
+  learner_created: true
+- name: src/advisor/server/Client.java
+  visible: true
+  learner_created: true
+- name: src/advisor/server/Server.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/62/stages/337/implement#comment
 status: Unchecked
 record: -1

@@ -13,10 +13,6 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Music Advisor/task" />
-            <option value="$PROJECT_DIR$/Topics/Decorator/Breakfast Decorator" />
-            <option value="$PROJECT_DIR$/Topics/Decorator/Coffee Decorator" />
-            <option value="$PROJECT_DIR$/Topics/Decorator/Pizza Decorator" />
-            <option value="$PROJECT_DIR$/Topics/Decorator/Theory" />
             <option value="$PROJECT_DIR$/util" />
           </set>
         </option>
