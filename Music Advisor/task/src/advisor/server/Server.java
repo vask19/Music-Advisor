@@ -6,6 +6,7 @@ import com.sun.net.httpserver.HttpServer;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
+import java.util.regex.Pattern;
 
 public class Server {
 
@@ -24,20 +25,25 @@ public class Server {
                 new HttpHandler() {
                     public void handle(HttpExchange exchange) throws IOException {
                         String hello = "hello, world";
-                        System.out.println("ok");
                         exchange.sendResponseHeaders(200, hello.length());
                         exchange.getResponseBody().write(hello.getBytes());
-
                         exchange.getResponseBody().close();
                         String query = exchange.getRequestURI().getQuery();
-                        System.out.println(query);
+                        Pattern pattern = Pattern.compile("code=\\.*");
+
+                        if (pattern.matcher(query).find())
+                            System.out.println("true");
+                        else System.out.println(false);
+                        server.stop(1);
+
+
+
 
                     }
                 }
 
         );
         server.start();
-
 
     }
 

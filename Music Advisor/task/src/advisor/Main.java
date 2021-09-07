@@ -10,6 +10,9 @@ public class Main {
         System.out.println(advisorDecorator.newAlbums());
         System.out.println(advisorDecorator.exit());
         System.out.println(advisorDecorator.featured());
+        String a = "df";
+        a = new StringBuilder(a).reverse().toString();
+
 
     }
 
