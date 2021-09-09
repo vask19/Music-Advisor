@@ -14,12 +14,12 @@ public class Client {
     
     public static void start(){
         HttpClient httpClient = HttpClient.newHttpClient();
-        URI fakePostService = URI.create("https://jsonplaceholder.typicode.com/posts");
-        String  bookDate = "{\"title\":\"The Invisible Man\", \"author\":\"H. G. Wells\"}";
+        URI fakePostService = URI.create("https://accounts.spotify.com/api/token");
+        String  bookDate = "{}";
 
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(fakePostService)
-                .header("Content-Type", "application/json")
+                .header("application/x-www-form-urlencoded", "code ")
                 .POST(HttpRequest.BodyPublishers.ofString(bookDate))
                 .build();
 

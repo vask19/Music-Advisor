@@ -31,8 +31,11 @@ public class Server {
                         String query = exchange.getRequestURI().getQuery();
                         Pattern pattern = Pattern.compile("code=\\.*");
 
-                        if (pattern.matcher(query).find())
+                        if (pattern.matcher(query).find()){
                             System.out.println("true");
+                            System.out.println(query);
+                        }
+
                         else System.out.println(false);
                         server.stop(1);
 

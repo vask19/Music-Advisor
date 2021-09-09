@@ -474,6 +474,15 @@ files:
 - name: src/advisor/test.java
   visible: true
   learner_created: true
+- name: src/advisor/SpotifyData.java
+  visible: true
+  learner_created: true
+- name: src/advisor/Controller.java
+  visible: true
+  learner_created: true
+- name: src/advisor/View.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/62/stages/337/implement#comment
 status: Unchecked
 record: -1
