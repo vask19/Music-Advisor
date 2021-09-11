@@ -465,15 +465,6 @@ files:
         }
     }
   learner_created: true
-- name: src/advisor/server/Client.java
-  visible: true
-  learner_created: true
-- name: src/advisor/server/Server.java
-  visible: true
-  learner_created: true
-- name: src/advisor/test.java
-  visible: true
-  learner_created: true
 - name: src/advisor/SpotifyData.java
   visible: true
   learner_created: true
@@ -483,6 +474,12 @@ files:
 - name: src/advisor/View.java
   visible: true
   learner_created: true
+- name: src/advisor/test.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/62/stages/337/implement#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Sat, 11 Sep 2021 18:28:06 UTC
 record: -1

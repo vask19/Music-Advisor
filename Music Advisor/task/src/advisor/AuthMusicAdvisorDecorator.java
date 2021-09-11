@@ -1,15 +1,19 @@
 package advisor;
 
+import java.io.IOException;
+
 public class AuthMusicAdvisorDecorator extends MusicAdvisorDecorator{
     private boolean ifAuth = false;
-    private final String redirect_uri = "https://accounts.spotify.com/authorize?client_id=55baa53664b8400995154bb8f972fa92&redirect_uri=http://localhost:8080&response_type=code";
 
     private final String MESSAGE_IF_NOT_AUTH = "Please, provide access for application.";
         public AuthMusicAdvisorDecorator(Advisor advisor) {
         super(advisor);
     }
-    public boolean auth(){
-        System.out.println(redirect_uri);
+
+    public boolean auth() throws IOException, InterruptedException {
+        Controller.getAuthCode();
+        System.out.println("code received");
+        Controller.getAccessToken();
         System.out.println("---SUCCESS---");
         ifAuth = true;
         return true;
