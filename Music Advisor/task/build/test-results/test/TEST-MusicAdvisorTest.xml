@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="MusicAdvisorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-09-11T18:27:59" hostname="HOME-PC" time="5.946">
+<testsuite name="MusicAdvisorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-09-12T07:21:50" hostname="HOME-PC" time="5.948">
   <properties/>
-  <testcase name="start" classname="MusicAdvisorTest" time="5.946"/>
+  <testcase name="start" classname="MusicAdvisorTest" time="5.948"/>
   <system-out><![CDATA[?[1;31m
 Start test 1?[0m
 > auth
 use this link to request the access code:
-http://127.0.0.1:45678/authorize?client_id=409ad95019b34181ad22ed97e9eddf47&redirect_uri=http://localhost:8080&response_type=code
+http://127.0.0.1:45678/authorize?client_id=55baa53664b8400995154bb8f972fa92&redirect_uri=http://localhost:8080&response_type=code
 waiting for code...
 Tester: making requests to redirect uri: http://localhost:8080
 Tester: done request 1: Authorization code not found. Try again.
@@ -19,6 +19,7 @@ response:
 {"access_token":"456456","token_type":"Bearer","expires_in":3600,"refresh_token":"567567","scope":""}
 
 ---SUCCESS---
+
 > featured
 ---FEATURED---
 Mellow Morning
@@ -26,19 +27,16 @@ Wake Up and Smell the Coffee
 Monday Motivation
 Songs to Sing in the Shower
 > exit
----GOODBYE!---
 ?[1;31m
 Start test 2?[0m
 > featured
 Please, provide access for application.
 > exit
----GOODBYE!---
 ?[1;31m
 Start test 3?[0m
 > new
 Please, provide access for application.
 > exit
----GOODBYE!---
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

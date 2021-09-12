@@ -868,6 +868,293 @@ files:
         }
     }
   learner_created: false
+- name: src/advisor/View.java
+  visible: true
+  text: |
+    package advisor;
+
+    public class View {
+
+
+        public static void printText(String text){
+            System.out.println(text);
+        }
+
+        public static void printAccessToken() {
+
+            System.out.println("making http request for access_token...");
+        }
+        public static void printAccessToken(String accessToken) {
+            System.out.println("response:");
+            System.out.println(accessToken);
+        }
+
+        public static void printAuthView(){
+            System.out.println("use this link to request the access code:");
+            System.out.printf("%s/authorize?client_id=%s&redirect_uri=%s&response_type=code",
+                    SpotifyData.AUTH_SERVER_PATH, SpotifyData.CLIENT_ID, SpotifyData.REDIRECT_URL);
+            System.out.println();
+            System.out.println("waiting for code...");
+        }
+
+        public static void printAccessTokenView() {
+            System.out.println("making http request for access_token...");
+        }
+
+    }
+  learner_created: true
+- name: src/advisor/SpotifyData.java
+  visible: true
+  text: |-
+    package advisor;
+
+    public class SpotifyData {
+        public static String AUTH_SERVER_PATH = "https://accounts.spotify.com";
+        public static final String GET_ACCESS_TOKEN_FROM_URL = "https://accounts.spotify.com/api/token";
+        public static  String REDIRECT_URL = "http://localhost:8080";
+        public static final String CLIENT_SECRET = "b1a2411bbb91493383810b4c7edeaa11";
+        public static String API_PATH = "https://api.spotify.com/";
+        public static final String CLIENT_ID = "55baa53664b8400995154bb8f972fa92";
+        public static final String REDIRECT_URL_IN_QUERY_STRING = "http%3A%2F%2Flocalhost%3A8080";
+
+    }
+
+    //b1a2411bbb91493383810b4c7edeaa11
+    //https://accounts.spotify.com/authorize?client_id=55baa53664b8400995154bb8f972fa92&redirect_uri=http://localhost:8080&response_type=code
+  learner_created: true
+- name: src/advisor/Controller.java
+  visible: true
+  text: |
+    package advisor;
+    import com.google.gson.JsonParser;
+    import com.sun.net.httpserver.HttpServer;
+    import java.io.IOException;
+    import java.net.InetSocketAddress;
+    import java.net.URI;
+    import java.net.http.HttpClient;
+    import java.net.http.HttpRequest;
+    import java.net.http.HttpResponse;
+
+
+    public class Controller {
+        private static String authCode = "";
+        static String accessToken = "";
+        public static void getAccessToken() throws IOException, InterruptedException {
+            View.printAccessTokenView();
+            HttpRequest requestAccessToken = HttpRequest.newBuilder()
+                    .POST(HttpRequest.BodyPublishers.ofString(
+                            "client_id=" + SpotifyData.CLIENT_ID
+                                    + "&client_secret=" + SpotifyData.CLIENT_SECRET
+                                    + "&grant_type=" + "authorization_code"
+                                    + "&code=" + authCode
+                                    + "&redirect_uri=" + SpotifyData.REDIRECT_URL_IN_QUERY_STRING))
+                    .header("Content-Type", "application/x-www-form-urlencoded")
+                    .uri(URI.create(SpotifyData.GET_ACCESS_TOKEN_FROM_URL))
+                    .build();
+            HttpClient client = HttpClient.newBuilder().build();
+            HttpResponse<String> responseWithAccessToken = client.send(requestAccessToken, HttpResponse.BodyHandlers.ofString());
+            accessToken = JsonParser.parseString(responseWithAccessToken.body()).getAsJsonObject().get("access_token").getAsString();
+            System.out.println(responseWithAccessToken.body());
+        }
+
+
+        public static void getAuthCode() throws IOException, InterruptedException {
+            HttpServer server = HttpServer.create();
+            server.bind(new InetSocketAddress(8080), 0);
+            server.start();
+            View.printAuthView();
+            server.createContext("/",
+                    exchange -> {
+                        String query = exchange.getRequestURI().getQuery();
+                        String result;
+                        if (query != null && query.contains("code")) {
+                            authCode = query.substring(5);
+                            result = "Got the code. Return back to your program.";
+                        } else {
+                            result = "Not found authorization code. Try again.";
+                        }
+                        exchange.sendResponseHeaders(200, result.length());
+                        exchange.getResponseBody().write(result.getBytes());
+                        exchange.getResponseBody().close();
+                        View.printText(result);
+                    }
+            );
+            while (authCode.equals("")) {
+                Thread.sleep(10);
+            }
+            server.stop(10);
+        }
+
+
+
+    }
+  learner_created: true
+- name: src/advisor/MusicAdvisor.java
+  visible: true
+  text: |
+    package advisor;
+
+    public class MusicAdvisor implements Advisor{
+
+        @Override
+        public String newAlbums() {
+            return "---NEW RELEASES---\n" +
+                    "Mountains [Sia, Diplo, Labrinth]\n" +
+                    "Runaway [Lil Peep]\n" +
+                    "The Greatest Show [Panic! At The Disco]\n" +
+                    "All Out Life [Slipknot]";
+        }
+
+        @Override
+        public String featured() {
+            return "---FEATURED---\n" +
+                    "Mellow Morning\n" +
+                    "Wake Up and Smell the Coffee\n" +
+                    "Monday Motivation\n" +
+                    "Songs to Sing in the Shower";
+        }
+
+        @Override
+        public String categories() {
+            return "---CATEGORIES---\n" +
+                    "Top Lists\n" +
+                    "Pop\n" +
+                    "Mood\n" +
+                    "Latin";
+        }
+
+        @Override
+        public String playlists(String nameOfCategory) {
+            return "---MOOD PLAYLISTS---\n" +
+                    "Walk Like A Badass  \n" +
+                    "Rage Beats  \n" +
+                    "Arab Mood Booster  \n" +
+                    "Sunday Stroll";
+        }
+
+        @Override
+        public String exit() {
+            return "---GOODBYE!---";
+        }
+    }
+  learner_created: true
+- name: src/advisor/AuthMusicAdvisorDecorator.java
+  visible: true
+  text: |
+    package advisor;
+
+    import java.io.IOException;
+
+    public class AuthMusicAdvisorDecorator extends MusicAdvisorDecorator{
+        private boolean ifAuth = false;
+
+        private final String MESSAGE_IF_NOT_AUTH = "Please, provide access for application.";
+            public AuthMusicAdvisorDecorator(Advisor advisor) {
+            super(advisor);
+        }
+
+        public boolean auth() throws IOException, InterruptedException {
+            Controller.getAuthCode();
+            System.out.println("code received");
+            Controller.getAccessToken();
+            System.out.println("---SUCCESS---");
+            ifAuth = true;
+            return true;
+        }
+
+        @Override
+        public String newAlbums() {
+            if (ifAuth){
+                return super.newAlbums();
+            }
+            else return MESSAGE_IF_NOT_AUTH;
+
+
+
+        }
+
+        @Override
+        public String featured() {
+            if (ifAuth){
+                return super.featured();
+            }
+            else return MESSAGE_IF_NOT_AUTH;
+        }
+
+        @Override
+        public String categories() {
+            if (ifAuth){
+                return super.categories();
+            }
+            else return MESSAGE_IF_NOT_AUTH;
+        }
+
+        @Override
+        public String playlists(String nameOfCategory) {
+            if (ifAuth){
+                return super.playlists(nameOfCategory);
+            }
+            else return MESSAGE_IF_NOT_AUTH;
+        }
+
+        @Override
+        public String exit() {
+            return super.exit();
+        }
+
+
+    }
+  learner_created: true
+- name: src/advisor/MusicAdvisorDecorator.java
+  visible: true
+  text: |
+    package advisor;
+
+    public class MusicAdvisorDecorator implements Advisor{
+        private Advisor advisor;
+
+        public MusicAdvisorDecorator(Advisor advisor){
+            this.advisor = advisor;
+        }
+        @Override
+        public String newAlbums() {
+            return advisor.newAlbums();
+        }
+
+        @Override
+        public String featured() {
+            return advisor.featured();
+        }
+
+        @Override
+        public String categories() {
+            return advisor.categories();
+        }
+
+        @Override
+        public String playlists(String nameOfCategory) {
+            return advisor.playlists(nameOfCategory);
+        }
+
+        @Override
+        public String exit() {
+            return advisor.exit();
+        }
+    }
+  learner_created: true
+- name: src/advisor/Advisor.java
+  visible: true
+  text: |
+    package advisor;
+
+    public interface Advisor {
+         String newAlbums();
+         String featured();
+         String categories();
+         String playlists(String nameOfCategory);
+         String exit();
+    }
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/62/stages/338/implement#comment
 status: Unchecked
-record: -1
+record: 4

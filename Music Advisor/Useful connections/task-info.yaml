@@ -474,12 +474,9 @@ files:
 - name: src/advisor/View.java
   visible: true
   learner_created: true
-- name: src/advisor/test.java
-  visible: true
-  learner_created: true
 feedback_link: https://hyperskill.org/projects/62/stages/337/implement#comment
 status: Solved
 feedback:
   message: Congratulations!
-  time: Sat, 11 Sep 2021 18:28:06 UTC
-record: -1
+  time: Sun, 12 Sep 2021 07:21:56 UTC
+record: 3

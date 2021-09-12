@@ -10,11 +10,9 @@ public class AuthMusicAdvisorDecorator extends MusicAdvisorDecorator{
         super(advisor);
     }
 
-    public boolean auth() throws IOException, InterruptedException {
+    public boolean auth(){
         Controller.getAuthCode();
-        System.out.println("code received");
         Controller.getAccessToken();
-        System.out.println("---SUCCESS---");
         ifAuth = true;
         return true;
     }

@@ -7,10 +7,7 @@ public class View {
         System.out.println(text);
     }
 
-    public static void printAccessToken() {
 
-        System.out.println("making http request for access_token...");
-    }
     public static void printAccessToken(String accessToken) {
         System.out.println("response:");
         System.out.println(accessToken);
@@ -26,6 +23,7 @@ public class View {
 
     public static void printAccessTokenView() {
         System.out.println("making http request for access_token...");
+        System.out.println("response:");
     }
 
 }
