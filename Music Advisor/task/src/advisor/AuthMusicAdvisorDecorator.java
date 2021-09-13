@@ -1,6 +1,6 @@
 package advisor;
 
-import java.io.IOException;
+
 
 public class AuthMusicAdvisorDecorator extends MusicAdvisorDecorator{
     private boolean ifAuth = false;
@@ -21,6 +21,7 @@ public class AuthMusicAdvisorDecorator extends MusicAdvisorDecorator{
     public String newAlbums() {
         if (ifAuth){
             return super.newAlbums();
+
         }
         else return MESSAGE_IF_NOT_AUTH;
 

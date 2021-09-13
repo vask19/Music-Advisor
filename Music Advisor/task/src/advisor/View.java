@@ -1,5 +1,9 @@
 package advisor;
 
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+
 public class View {
 
 
@@ -24,6 +28,17 @@ public class View {
     public static void printAccessTokenView() {
         System.out.println("making http request for access_token...");
         System.out.println("response:");
+    }
+
+
+    public static void printNewAlbums(JsonObject js){
+
+        for (JsonElement je : js.getAsJsonArray("items")){
+            je.getAsJsonObject().get("name").getAsString();
+        }
+
+
+
     }
 
 }

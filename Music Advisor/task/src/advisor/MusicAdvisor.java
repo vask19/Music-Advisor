@@ -1,14 +1,18 @@
 package advisor;
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+
+import java.net.URI;
+
 public class MusicAdvisor implements Advisor{
 
     @Override
     public String newAlbums() {
-        return "---NEW RELEASES---\n" +
-                "Mountains [Sia, Diplo, Labrinth]\n" +
-                "Runaway [Lil Peep]\n" +
-                "The Greatest Show [Panic! At The Disco]\n" +
-                "All Out Life [Slipknot]";
+        JsonObject js = Controller.getNewAlbums();
+        View.printNewAlbums(js);
+        return null;
     }
 
     @Override

@@ -22,7 +22,7 @@ public class Main {
                     result = advisor.exit();
                     return;
                 case "new":
-                    result = advisorDecorator.newAlbums();
+                    advisorDecorator.newAlbums();
                     break;
                 case "auth":
                    advisorDecorator.auth();
@@ -37,6 +37,7 @@ public class Main {
                     break;
             }
             System.out.println(result);
+
 
 
         }

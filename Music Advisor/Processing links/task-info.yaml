@@ -1155,6 +1155,12 @@ files:
          String exit();
     }
   learner_created: true
+- name: src/advisor/test.java
+  visible: true
+  learner_created: true
+- name: src/advisor/js.json
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/62/stages/338/implement#comment
 status: Unchecked
 record: 4
