@@ -2,8 +2,9 @@ package advisor;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 
+import java.util.ArrayList;
+import java.util.List;
 public class View {
 
 
@@ -32,11 +33,36 @@ public class View {
 
 
     public static void printNewAlbums(JsonObject js){
+        for (JsonElement item : js.getAsJsonArray("items")){
+            List<String > artists = new ArrayList<>();
+            String albumName = item.getAsJsonObject().get("name").getAsString();
+            String  href = null;
 
-        for (JsonElement je : js.getAsJsonArray("items")){
-            je.getAsJsonObject().get("name").getAsString();
+            for (JsonElement artist :item.getAsJsonObject().getAsJsonArray("artists")){
+                href = item.getAsJsonObject().get("external_urls").getAsJsonObject().get("spotify").getAsString();
+                artists.add(artist.getAsJsonObject().get("name").getAsString());
+            }
+            System.out.println(albumName + "\n" + artists + "\n" + href + "\n");
         }
+    }
 
+    public static void printCategories(JsonObject js){
+        for (JsonElement item :js.getAsJsonArray("items")){
+            String categoryName = item.getAsJsonObject().get("name").getAsString();
+            if (categoryName != null)
+                System.out.println(categoryName);
+        }
+    }
+    public static void printFeatured(JsonObject js){
+        for (JsonElement item :js.getAsJsonArray("items")){
+            String playlistName = item.getAsJsonObject().get("name").getAsString();
+            String href = item.getAsJsonObject().get("external_urls").getAsJsonObject().get("spotify").getAsString();
+
+            if (href != null && playlistName != null);
+                System.out.println(playlistName + "\n" + href + "\n");
+
+
+        }
 
 
     }

@@ -55,17 +55,10 @@ public class Controller {
 
 
 
-    public static JsonObject getNewAlbums(){
-        String response = restRequestForSpotify(URI.create(SpotifyData.REST_PATH_NEW_RELEASES));
-        assert response != null;
-        return  JsonParser.parseString(response).getAsJsonObject().get("albums").getAsJsonObject();
-
-
-    }
 
 
 
-    public static String restRequestForSpotify(URI uri){
+    public static JsonObject restRequestForSpotify(URI uri){
         HttpRequest httpRequest = HttpRequest.newBuilder()
                 .header("Authorization","Bearer " + accessToken)
                 .uri(uri)
@@ -75,7 +68,7 @@ public class Controller {
             HttpClient client = HttpClient.newBuilder().build();
             HttpResponse<String> response = client.send(httpRequest,HttpResponse.BodyHandlers.ofString());
 
-            return response.body();
+            return  JsonParser.parseString(response.body()).getAsJsonObject();
 
 
         } catch (IOException | InterruptedException e) {

@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/210107/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Mon, 13 Sep 2021 09:34:54 UTC
+update_date: Tue, 14 Sep 2021 15:24:28 UTC
 stages:
 - id: 335
   step: 5477
@@ -106,6 +106,8 @@ topics:
     theory_id: 9746
   - title: StringBuilder
     theory_id: 3812
+  - title: Package
+    theory_id: 3621
   - title: Processing strings
     theory_id: 3551
   - title: Running programs on your computer
@@ -124,8 +126,6 @@ topics:
     theory_id: 3535
   - title: Instance methods
     theory_id: 3495
-  - title: Package
-    theory_id: 3621
   - title: Objects
     theory_id: 4727
   - title: Interface
@@ -139,6 +139,10 @@ topics:
     theory_id: 7427
   - title: Decorator
     theory_id: 5216
+  - title: Static members
+    theory_id: 3534
+  - title: Initialization blocks
+    theory_id: 3533
   - title: Access modifiers
     theory_id: 3589
   - title: Getters and setters
@@ -151,10 +155,6 @@ topics:
     theory_id: 3585
   - title: The Object class
     theory_id: 3596
-  - title: Static members
-    theory_id: 3534
-  - title: Initialization blocks
-    theory_id: 3533
   2:
   - title: Immutability
     theory_id: 7929
@@ -198,22 +198,22 @@ topics:
     theory_id: 3492
   - title: Multiple constructors
     theory_id: 3538
-  - title: The keyword super
-    theory_id: 3588
   - title: Annotations basics
     theory_id: 3622
+  - title: Anonymous classes
+    theory_id: 11896
+  - title: The keyword super
+    theory_id: 3588
   - title: Hiding and overriding
     theory_id: 3572
   - title: Polymorphism
     theory_id: 3587
   - title: Abstract class
     theory_id: 3597
-  - title: Abstract class vs interface
-    theory_id: 3563
-  - title: Anonymous classes
-    theory_id: 11896
   - title: Anonymous classes properties
     theory_id: 3564
+  - title: Abstract class vs interface
+    theory_id: 3563
   - title: Boxing and unboxing
     theory_id: 3595
   3:

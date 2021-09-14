@@ -36,7 +36,7 @@ public class Main {
                 case "playlists":
                     break;
             }
-            System.out.println(result);
+
 
 
 
