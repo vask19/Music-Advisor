@@ -15,10 +15,12 @@ public class View {
 
     public static void printAccessToken(String accessToken) {
         System.out.println("response:");
-        System.out.println(accessToken);
+
     }
 
     public static void printAuthView(){
+        System.out.println();
+
         System.out.println("use this link to request the access code:");
         System.out.printf("%s/authorize?client_id=%s&redirect_uri=%s&response_type=code",
                 SpotifyData.AUTH_SERVER_PATH, SpotifyData.CLIENT_ID, SpotifyData.REDIRECT_URL);
@@ -27,12 +29,16 @@ public class View {
     }
 
     public static void printAccessTokenView() {
+        System.out.println();
+
         System.out.println("making http request for access_token...");
         System.out.println("response:");
     }
 
 
     public static void printNewAlbums(JsonObject js){
+        System.out.println();
+
         for (JsonElement item : js.getAsJsonArray("items")){
             List<String > artists = new ArrayList<>();
             String albumName = item.getAsJsonObject().get("name").getAsString();
@@ -47,6 +53,7 @@ public class View {
     }
 
     public static void printCategories(JsonObject js){
+        System.out.println();
         for (JsonElement item :js.getAsJsonArray("items")){
             String categoryName = item.getAsJsonObject().get("name").getAsString();
             if (categoryName != null)
@@ -54,6 +61,7 @@ public class View {
         }
     }
     public static void printFeatured(JsonObject js){
+        System.out.println();
         for (JsonElement item :js.getAsJsonArray("items")){
             String playlistName = item.getAsJsonObject().get("name").getAsString();
             String href = item.getAsJsonObject().get("external_urls").getAsJsonObject().get("spotify").getAsString();
@@ -63,7 +71,14 @@ public class View {
 
 
         }
+    }
+    public static void printPlaylists(JsonObject playlists){
+        System.out.println();
 
+        for (JsonElement item :playlists.getAsJsonArray("items")){
+            System.out.println(item.getAsJsonObject().get("name").getAsString() +
+                    "\n" + item.getAsJsonObject().get("external_urls").getAsJsonObject().get("spotify").getAsString() + "\n");
+        }
 
     }
 

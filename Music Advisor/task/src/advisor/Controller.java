@@ -20,43 +20,6 @@ public class Controller {
     private static String authCode = null;
     static String accessToken = "";
 
-    /*
-    String ur = "https://api.spotify.com/v1/browse/new-releases";
-      HttpRequest httpRequest = HttpRequest.newBuilder()
-                .header("Authorization", "Bearer " + accessToken)
-                .uri(URI.create(ur))
-                .GET()
-                .build();*/
-
-    /*public static HttpRequest createRequest(String as){
-          URI uri = null;
-          switch (as){
-            case "new":
-                uri = URI.create(SpotifyData.REST_PATH_NEW_RELEASES);
-                break;
-            case "featured":
-                uri = URI.create(SpotifyData.REST_PATH_FEATURED_PLAYLISTS);
-                break;
-            case "categories":
-                uri = URI.create(SpotifyData.REST_PATH_ALL_CATEGORIES);
-                break;
-            case "playlists \\.*":
-                break;
-
-
-            return HttpRequest.newBuilder()
-                    .header("Authorization","Bearer " + accessToken)
-                    .uri(uri)
-                    .GET()
-                    .build();
-    }*/
-
-
-
-
-
-
-
 
     public static JsonObject restRequestForSpotify(URI uri){
         HttpRequest httpRequest = HttpRequest.newBuilder()
@@ -98,7 +61,7 @@ public class Controller {
             accessToken = jo.get("access_token").getAsString();
             assert response != null;
 
-            System.out.println( "\n---SUCCESS---");
+            System.out.print( "\n---SUCCESS---");
     }catch (InterruptedException | IOException e) {
             System.out.println("Error response");
         }
@@ -119,7 +82,6 @@ public class Controller {
                         if (query != null && query.contains("code")) {
                             authCode = query.substring(5);
                             System.out.println("code received");
-                            System.out.println(authCode);
                             request = "Got the code. Return back to your program.";
                         } else {
                             request = "Authorization code not found. Try again.";

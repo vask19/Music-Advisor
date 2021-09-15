@@ -23,7 +23,10 @@ public class AuthMusicAdvisorDecorator extends MusicAdvisorDecorator{
             return super.newAlbums();
 
         }
-        else return MESSAGE_IF_NOT_AUTH;
+        else {
+            System.out.println(MESSAGE_IF_NOT_AUTH);
+            return MESSAGE_IF_NOT_AUTH;
+        }
 
 
 
@@ -34,7 +37,10 @@ public class AuthMusicAdvisorDecorator extends MusicAdvisorDecorator{
         if (ifAuth){
             return super.featured();
         }
-        else return MESSAGE_IF_NOT_AUTH;
+        else {
+            System.out.println(MESSAGE_IF_NOT_AUTH);
+            return MESSAGE_IF_NOT_AUTH;
+        }
     }
 
     @Override
@@ -42,7 +48,10 @@ public class AuthMusicAdvisorDecorator extends MusicAdvisorDecorator{
         if (ifAuth){
             return super.categories();
         }
-        else return MESSAGE_IF_NOT_AUTH;
+        else {
+            System.out.println(MESSAGE_IF_NOT_AUTH);
+            return MESSAGE_IF_NOT_AUTH;
+        }
     }
 
     @Override
@@ -50,7 +59,10 @@ public class AuthMusicAdvisorDecorator extends MusicAdvisorDecorator{
         if (ifAuth){
             return super.playlists(nameOfCategory);
         }
-        else return MESSAGE_IF_NOT_AUTH;
+        else {
+            System.out.println(MESSAGE_IF_NOT_AUTH);
+            return MESSAGE_IF_NOT_AUTH;
+        }
     }
 
     @Override
