@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/210107/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Wed, 15 Sep 2021 14:17:39 UTC
+update_date: Thu, 16 Sep 2021 15:20:07 UTC
 stages:
 - id: 335
   step: 5477
@@ -16,7 +16,7 @@ stages:
   is_completed: true
 - id: 338
   step: 5480
-  is_completed: false
+  is_completed: true
 - id: 339
   step: 5481
   is_completed: false
@@ -174,6 +174,8 @@ topics:
     theory_id: 8504
   - title: Overloading
     theory_id: 3525
+  - title: Web development
+    theory_id: 13931
   - title: Errors in programs
     theory_id: 3536
   - title: What is an exception

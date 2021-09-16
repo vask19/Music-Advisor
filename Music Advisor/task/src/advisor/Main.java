@@ -34,7 +34,8 @@ public class Main {
             String answer = scanner.nextLine();
             String playlistName = "";
             if (answer.contains("playlists")){
-                playlistName = answer.substring(9);
+                playlistName = answer.substring(10);
+
                 answer = "playlists";
 
             }

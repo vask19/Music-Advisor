@@ -851,6 +851,1285 @@ files:
         }
     }
   learner_created: false
+- name: src/advisor/js.json
+  visible: true
+  text: |2+
+
+    {
+      "albums" : {
+
+        "href" : "https://api.spotify.com/v1/browse/new-releases?offset=0&limit=20",
+
+
+        "items" : [ {
+
+          "album_type" : "album",
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/70kkdajctXSbqSMJbQO424"
+            },
+            "href" : "https://api.spotify.com/v1/artists/70kkdajctXSbqSMJbQO424",
+            "id" : "70kkdajctXSbqSMJbQO424",
+            "name" : "Kacey Musgraves",
+            "type" : "artist",
+            "uri" : "spotify:artist:70kkdajctXSbqSMJbQO424"
+          } ],
+          "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/album/6y9LbrjY2TpaLvtbE7FTkc"
+          },
+          "href" : "https://api.spotify.com/v1/albums/6y9LbrjY2TpaLvtbE7FTkc",
+          "id" : "6y9LbrjY2TpaLvtbE7FTkc",
+          "images" : [ {
+            "height" : 640,
+            "url" : "https://i.scdn.co/image/ab67616d0000b273df169fbe45f0e633cb725462",
+            "width" : 640
+          }, {
+            "height" : 300,
+            "url" : "https://i.scdn.co/image/ab67616d00001e02df169fbe45f0e633cb725462",
+            "width" : 300
+          }, {
+            "height" : 64,
+            "url" : "https://i.scdn.co/image/ab67616d00004851df169fbe45f0e633cb725462",
+            "width" : 64
+          } ],
+          "name" : "star-crossed",
+          "release_date" : "2021-09-10",
+          "release_date_precision" : "day",
+          "total_tracks" : 15,
+          "type" : "album",
+          "uri" : "spotify:album:6y9LbrjY2TpaLvtbE7FTkc"
+
+        },
+
+
+
+          {
+          "album_type" : "single",
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/6eUKZXaKkcviH0Ku9w2n3V"
+            },
+            "href" : "https://api.spotify.com/v1/artists/6eUKZXaKkcviH0Ku9w2n3V",
+            "id" : "6eUKZXaKkcviH0Ku9w2n3V",
+            "name" : "Ed Sheeran",
+            "type" : "artist",
+            "uri" : "spotify:artist:6eUKZXaKkcviH0Ku9w2n3V"
+          } ],
+          "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/album/5kFCfioZraFsRWpoitQjmx"
+          },
+          "href" : "https://api.spotify.com/v1/albums/5kFCfioZraFsRWpoitQjmx",
+          "id" : "5kFCfioZraFsRWpoitQjmx",
+          "images" : [ {
+            "height" : 640,
+            "url" : "https://i.scdn.co/image/ab67616d0000b273469407300636945a5eb2d9ed",
+            "width" : 640
+          }, {
+            "height" : 300,
+            "url" : "https://i.scdn.co/image/ab67616d00001e02469407300636945a5eb2d9ed",
+            "width" : 300
+          }, {
+            "height" : 64,
+            "url" : "https://i.scdn.co/image/ab67616d00004851469407300636945a5eb2d9ed",
+            "width" : 64
+          } ],
+          "name" : "Shivers",
+          "release_date" : "2021-09-10",
+          "release_date_precision" : "day",
+          "total_tracks" : 1,
+          "type" : "album",
+          "uri" : "spotify:album:5kFCfioZraFsRWpoitQjmx"
+        },
+
+
+
+          {
+          "album_type" : "album",
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/0urTpYCsixqZwgNTkPJOJ4"
+            },
+            "href" : "https://api.spotify.com/v1/artists/0urTpYCsixqZwgNTkPJOJ4",
+            "id" : "0urTpYCsixqZwgNTkPJOJ4",
+            "name" : "Aaliyah",
+            "type" : "artist",
+            "uri" : "spotify:artist:0urTpYCsixqZwgNTkPJOJ4"
+          } ],
+          "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/album/0cNaDPtbHC1PMJMRTY2GFc"
+          },
+          "href" : "https://api.spotify.com/v1/albums/0cNaDPtbHC1PMJMRTY2GFc",
+          "id" : "0cNaDPtbHC1PMJMRTY2GFc",
+          "images" : [ {
+            "height" : 640,
+            "url" : "https://i.scdn.co/image/ab67616d0000b273adf8657e1af5397243934673",
+            "width" : 640
+          }, {
+            "height" : 300,
+            "url" : "https://i.scdn.co/image/ab67616d00001e02adf8657e1af5397243934673",
+            "width" : 300
+          }, {
+            "height" : 64,
+            "url" : "https://i.scdn.co/image/ab67616d00004851adf8657e1af5397243934673",
+            "width" : 64
+          } ],
+          "name" : "Aaliyah",
+          "release_date" : "2001-07-07",
+          "release_date_precision" : "day",
+          "total_tracks" : 15,
+          "type" : "album",
+          "uri" : "spotify:album:0cNaDPtbHC1PMJMRTY2GFc"
+        },
+
+
+          {
+          "album_type" : "album",
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/5SXuuuRpukkTvsLuUknva1"
+            },
+            "href" : "https://api.spotify.com/v1/artists/5SXuuuRpukkTvsLuUknva1",
+            "id" : "5SXuuuRpukkTvsLuUknva1",
+            "name" : "Baby Keem",
+            "type" : "artist",
+            "uri" : "spotify:artist:5SXuuuRpukkTvsLuUknva1"
+          } ],
+          "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/album/3r46DPIQeBQbjvjjV5mXGg"
+          },
+          "href" : "https://api.spotify.com/v1/albums/3r46DPIQeBQbjvjjV5mXGg",
+          "id" : "3r46DPIQeBQbjvjjV5mXGg",
+          "images" : [ {
+            "height" : 640,
+            "url" : "https://i.scdn.co/image/ab67616d0000b2731bfa23b13d0504fb90c37b39",
+            "width" : 640
+          }, {
+            "height" : 300,
+            "url" : "https://i.scdn.co/image/ab67616d00001e021bfa23b13d0504fb90c37b39",
+            "width" : 300
+          }, {
+            "height" : 64,
+            "url" : "https://i.scdn.co/image/ab67616d000048511bfa23b13d0504fb90c37b39",
+            "width" : 64
+          } ],
+          "name" : "The Melodic Blue",
+          "release_date" : "2021-09-10",
+          "release_date_precision" : "day",
+          "total_tracks" : 16,
+          "type" : "album",
+          "uri" : "spotify:album:3r46DPIQeBQbjvjjV5mXGg"
+        }, {
+          "album_type" : "single",
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/4yvcSjfu4PC0CYQyLy4wSq"
+            },
+            "href" : "https://api.spotify.com/v1/artists/4yvcSjfu4PC0CYQyLy4wSq",
+            "id" : "4yvcSjfu4PC0CYQyLy4wSq",
+            "name" : "Glass Animals",
+            "type" : "artist",
+            "uri" : "spotify:artist:4yvcSjfu4PC0CYQyLy4wSq"
+          } ],
+          "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/album/5xTqRRAUJGDAQmGN8QGg29"
+          },
+          "href" : "https://api.spotify.com/v1/albums/5xTqRRAUJGDAQmGN8QGg29",
+          "id" : "5xTqRRAUJGDAQmGN8QGg29",
+          "images" : [ {
+            "height" : 640,
+            "url" : "https://i.scdn.co/image/ab67616d0000b273ef11401922402a0dec620c37",
+            "width" : 640
+          }, {
+            "height" : 300,
+            "url" : "https://i.scdn.co/image/ab67616d00001e02ef11401922402a0dec620c37",
+            "width" : 300
+          }, {
+            "height" : 64,
+            "url" : "https://i.scdn.co/image/ab67616d00004851ef11401922402a0dec620c37",
+            "width" : 64
+          } ],
+          "name" : "I Don't Wanna Talk (I Just Wanna Dance)",
+          "release_date" : "2021-09-10",
+          "release_date_precision" : "day",
+          "total_tracks" : 1,
+          "type" : "album",
+          "uri" : "spotify:album:5xTqRRAUJGDAQmGN8QGg29"
+        }, {
+          "album_type" : "single",
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/2kucQ9jQwuD8jWdtR9Ef38"
+            },
+            "href" : "https://api.spotify.com/v1/artists/2kucQ9jQwuD8jWdtR9Ef38",
+            "id" : "2kucQ9jQwuD8jWdtR9Ef38",
+            "name" : "Sam Hunt",
+            "type" : "artist",
+            "uri" : "spotify:artist:2kucQ9jQwuD8jWdtR9Ef38"
+          } ],
+          "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/album/3i5LIueVgxjgCu1TIZOraP"
+          },
+          "href" : "https://api.spotify.com/v1/albums/3i5LIueVgxjgCu1TIZOraP",
+          "id" : "3i5LIueVgxjgCu1TIZOraP",
+          "images" : [ {
+            "height" : 640,
+            "url" : "https://i.scdn.co/image/ab67616d0000b273cf59a62f06c6020a8ed9180b",
+            "width" : 640
+          }, {
+            "height" : 300,
+            "url" : "https://i.scdn.co/image/ab67616d00001e02cf59a62f06c6020a8ed9180b",
+            "width" : 300
+          }, {
+            "height" : 64,
+            "url" : "https://i.scdn.co/image/ab67616d00004851cf59a62f06c6020a8ed9180b",
+            "width" : 64
+          } ],
+          "name" : "23",
+          "release_date" : "2021-09-09",
+          "release_date_precision" : "day",
+          "total_tracks" : 1,
+          "type" : "album",
+          "uri" : "spotify:album:3i5LIueVgxjgCu1TIZOraP"
+        }, {
+          "album_type" : "single",
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/3WGpXCj9YhhfX11TToZcXP"
+            },
+            "href" : "https://api.spotify.com/v1/artists/3WGpXCj9YhhfX11TToZcXP",
+            "id" : "3WGpXCj9YhhfX11TToZcXP",
+            "name" : "Troye Sivan",
+            "type" : "artist",
+            "uri" : "spotify:artist:3WGpXCj9YhhfX11TToZcXP"
+          } ],
+          "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/album/44CdsgXhU5R2esprq0tf43"
+          },
+          "href" : "https://api.spotify.com/v1/albums/44CdsgXhU5R2esprq0tf43",
+          "id" : "44CdsgXhU5R2esprq0tf43",
+          "images" : [ {
+            "height" : 640,
+            "url" : "https://i.scdn.co/image/ab67616d0000b2735cf05521594fbf41d2a48893",
+            "width" : 640
+          }, {
+            "height" : 300,
+            "url" : "https://i.scdn.co/image/ab67616d00001e025cf05521594fbf41d2a48893",
+            "width" : 300
+          }, {
+            "height" : 64,
+            "url" : "https://i.scdn.co/image/ab67616d000048515cf05521594fbf41d2a48893",
+            "width" : 64
+          } ],
+          "name" : "Angel Baby",
+          "release_date" : "2021-09-09",
+          "release_date_precision" : "day",
+          "total_tracks" : 1,
+          "type" : "album",
+          "uri" : "spotify:album:44CdsgXhU5R2esprq0tf43"
+        }, {
+          "album_type" : "single",
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/4r63FhuTkUYltbVAg5TQnk"
+            },
+            "href" : "https://api.spotify.com/v1/artists/4r63FhuTkUYltbVAg5TQnk",
+            "id" : "4r63FhuTkUYltbVAg5TQnk",
+            "name" : "DaBaby",
+            "type" : "artist",
+            "uri" : "spotify:artist:4r63FhuTkUYltbVAg5TQnk"
+          }, {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/55Aa2cqylxrFIXC767Z865"
+            },
+            "href" : "https://api.spotify.com/v1/artists/55Aa2cqylxrFIXC767Z865",
+            "id" : "55Aa2cqylxrFIXC767Z865",
+            "name" : "Lil Wayne",
+            "type" : "artist",
+            "uri" : "spotify:artist:55Aa2cqylxrFIXC767Z865"
+          } ],
+          "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/album/6PwnWA19E1JThqWMdRrj6l"
+          },
+          "href" : "https://api.spotify.com/v1/albums/6PwnWA19E1JThqWMdRrj6l",
+          "id" : "6PwnWA19E1JThqWMdRrj6l",
+          "images" : [ {
+            "height" : 640,
+            "url" : "https://i.scdn.co/image/ab67616d0000b27322ff72d81de2ce4398322255",
+            "width" : 640
+          }, {
+            "height" : 300,
+            "url" : "https://i.scdn.co/image/ab67616d00001e0222ff72d81de2ce4398322255",
+            "width" : 300
+          }, {
+            "height" : 64,
+            "url" : "https://i.scdn.co/image/ab67616d0000485122ff72d81de2ce4398322255",
+            "width" : 64
+          } ],
+          "name" : "Lonely (with Lil Wayne)",
+          "release_date" : "2021-09-09",
+          "release_date_precision" : "day",
+          "total_tracks" : 1,
+          "type" : "album",
+          "uri" : "spotify:album:6PwnWA19E1JThqWMdRrj6l"
+        }, {
+          "album_type" : "single",
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/3DiDSECUqqY1AuBP8qtaIa"
+            },
+            "href" : "https://api.spotify.com/v1/artists/3DiDSECUqqY1AuBP8qtaIa",
+            "id" : "3DiDSECUqqY1AuBP8qtaIa",
+            "name" : "Alicia Keys",
+            "type" : "artist",
+            "uri" : "spotify:artist:3DiDSECUqqY1AuBP8qtaIa"
+          }, {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/1zNqQNIdeOUZHb8zbZRFMX"
+            },
+            "href" : "https://api.spotify.com/v1/artists/1zNqQNIdeOUZHb8zbZRFMX",
+            "id" : "1zNqQNIdeOUZHb8zbZRFMX",
+            "name" : "Swae Lee",
+            "type" : "artist",
+            "uri" : "spotify:artist:1zNqQNIdeOUZHb8zbZRFMX"
+          } ],
+          "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/album/18ceMoqxkcGM1xFW4aux6h"
+          },
+          "href" : "https://api.spotify.com/v1/albums/18ceMoqxkcGM1xFW4aux6h",
+          "id" : "18ceMoqxkcGM1xFW4aux6h",
+          "images" : [ {
+            "height" : 640,
+            "url" : "https://i.scdn.co/image/ab67616d0000b273cca585ea74a624ce495f5469",
+            "width" : 640
+          }, {
+            "height" : 300,
+            "url" : "https://i.scdn.co/image/ab67616d00001e02cca585ea74a624ce495f5469",
+            "width" : 300
+          }, {
+            "height" : 64,
+            "url" : "https://i.scdn.co/image/ab67616d00004851cca585ea74a624ce495f5469",
+            "width" : 64
+          } ],
+          "name" : "LALA (Unlocked) (feat. Swae Lee)",
+          "release_date" : "2021-09-09",
+          "release_date_precision" : "day",
+          "total_tracks" : 1,
+          "type" : "album",
+          "uri" : "spotify:album:18ceMoqxkcGM1xFW4aux6h"
+        }, {
+          "album_type" : "single",
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/14CHVeJGrR5xgUGQFV5BVM"
+            },
+            "href" : "https://api.spotify.com/v1/artists/14CHVeJGrR5xgUGQFV5BVM",
+            "id" : "14CHVeJGrR5xgUGQFV5BVM",
+            "name" : "Fivio Foreign",
+            "type" : "artist",
+            "uri" : "spotify:artist:14CHVeJGrR5xgUGQFV5BVM"
+          } ],
+          "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/album/6RCSiZ997D80DSuDuHWsUH"
+          },
+          "href" : "https://api.spotify.com/v1/albums/6RCSiZ997D80DSuDuHWsUH",
+          "id" : "6RCSiZ997D80DSuDuHWsUH",
+          "images" : [ {
+            "height" : 640,
+            "url" : "https://i.scdn.co/image/ab67616d0000b273e1137f80d11e3b0fee018a79",
+            "width" : 640
+          }, {
+            "height" : 300,
+            "url" : "https://i.scdn.co/image/ab67616d00001e02e1137f80d11e3b0fee018a79",
+            "width" : 300
+          }, {
+            "height" : 64,
+            "url" : "https://i.scdn.co/image/ab67616d00004851e1137f80d11e3b0fee018a79",
+            "width" : 64
+          } ],
+          "name" : "Story Time",
+          "release_date" : "2021-09-10",
+          "release_date_precision" : "day",
+          "total_tracks" : 1,
+          "type" : "album",
+          "uri" : "spotify:album:6RCSiZ997D80DSuDuHWsUH"
+        }, {
+          "album_type" : "album",
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+            },
+            "href" : "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+            "id" : "2ye2Wgw4gimLv2eAKyk1NB",
+            "name" : "Metallica",
+            "type" : "artist",
+            "uri" : "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+          } ],
+          "available_markets" : [ ],
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/album/5dpCnTFzIhw28TvBb7Elom"
+          },
+          "href" : "https://api.spotify.com/v1/albums/5dpCnTFzIhw28TvBb7Elom",
+          "id" : "5dpCnTFzIhw28TvBb7Elom",
+          "images" : [ {
+            "height" : 640,
+            "url" : "https://i.scdn.co/image/ab67616d0000b273333a976fa8dccdd5f99a19b1",
+            "width" : 640
+          }, {
+            "height" : 300,
+            "url" : "https://i.scdn.co/image/ab67616d00001e02333a976fa8dccdd5f99a19b1",
+            "width" : 300
+          }, {
+            "height" : 64,
+            "url" : "https://i.scdn.co/image/ab67616d00004851333a976fa8dccdd5f99a19b1",
+            "width" : 64
+          } ],
+          "name" : "Metallica (Remastered Expanded Edition)",
+          "release_date" : "1991-08-12",
+          "release_date_precision" : "day",
+          "total_tracks" : 39,
+          "type" : "album",
+          "uri" : "spotify:album:5dpCnTFzIhw28TvBb7Elom"
+        }, {
+          "album_type" : "album",
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/1l2ekx5skC4gJH8djERwh1"
+            },
+            "href" : "https://api.spotify.com/v1/artists/1l2ekx5skC4gJH8djERwh1",
+            "id" : "1l2ekx5skC4gJH8djERwh1",
+            "name" : "Don Diablo",
+            "type" : "artist",
+            "uri" : "spotify:artist:1l2ekx5skC4gJH8djERwh1"
+          } ],
+          "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/album/2bFEI0FZ688BlTpclN88VX"
+          },
+          "href" : "https://api.spotify.com/v1/albums/2bFEI0FZ688BlTpclN88VX",
+          "id" : "2bFEI0FZ688BlTpclN88VX",
+          "images" : [ {
+            "height" : 640,
+            "url" : "https://i.scdn.co/image/ab67616d0000b273ed9414a7425e8a5f2c80e2b8",
+            "width" : 640
+          }, {
+            "height" : 300,
+            "url" : "https://i.scdn.co/image/ab67616d00001e02ed9414a7425e8a5f2c80e2b8",
+            "width" : 300
+          }, {
+            "height" : 64,
+            "url" : "https://i.scdn.co/image/ab67616d00004851ed9414a7425e8a5f2c80e2b8",
+            "width" : 64
+          } ],
+          "name" : "FORΞVΞR",
+          "release_date" : "2021-09-10",
+          "release_date_precision" : "day",
+          "total_tracks" : 21,
+          "type" : "album",
+          "uri" : "spotify:album:2bFEI0FZ688BlTpclN88VX"
+        }, {
+          "album_type" : "single",
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/7sKxqpSqbIzphAKAhrqvlf"
+            },
+            "href" : "https://api.spotify.com/v1/artists/7sKxqpSqbIzphAKAhrqvlf",
+            "id" : "7sKxqpSqbIzphAKAhrqvlf",
+            "name" : "Walker Hayes",
+            "type" : "artist",
+            "uri" : "spotify:artist:7sKxqpSqbIzphAKAhrqvlf"
+          }, {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/6LqNN22kT3074XbTVUrhzX"
+            },
+            "href" : "https://api.spotify.com/v1/artists/6LqNN22kT3074XbTVUrhzX",
+            "id" : "6LqNN22kT3074XbTVUrhzX",
+            "name" : "Kesha",
+            "type" : "artist",
+            "uri" : "spotify:artist:6LqNN22kT3074XbTVUrhzX"
+          } ],
+          "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/album/2Z6lVnDJpJPmFro7dOziHA"
+          },
+          "href" : "https://api.spotify.com/v1/albums/2Z6lVnDJpJPmFro7dOziHA",
+          "id" : "2Z6lVnDJpJPmFro7dOziHA",
+          "images" : [ {
+            "height" : 640,
+            "url" : "https://i.scdn.co/image/ab67616d0000b2738d17332a30d31dc65a9a2631",
+            "width" : 640
+          }, {
+            "height" : 300,
+            "url" : "https://i.scdn.co/image/ab67616d00001e028d17332a30d31dc65a9a2631",
+            "width" : 300
+          }, {
+            "height" : 64,
+            "url" : "https://i.scdn.co/image/ab67616d000048518d17332a30d31dc65a9a2631",
+            "width" : 64
+          } ],
+          "name" : "Fancy Like (feat. Kesha)",
+          "release_date" : "2021-09-10",
+          "release_date_precision" : "day",
+          "total_tracks" : 2,
+          "type" : "album",
+          "uri" : "spotify:album:2Z6lVnDJpJPmFro7dOziHA"
+        }, {
+          "album_type" : "single",
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/74KM79TiuVKeVCqs8QtB0B"
+            },
+            "href" : "https://api.spotify.com/v1/artists/74KM79TiuVKeVCqs8QtB0B",
+            "id" : "74KM79TiuVKeVCqs8QtB0B",
+            "name" : "Sabrina Carpenter",
+            "type" : "artist",
+            "uri" : "spotify:artist:74KM79TiuVKeVCqs8QtB0B"
+          } ],
+          "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/album/2NbUBAN5Mv7KAacJHOtC49"
+          },
+          "href" : "https://api.spotify.com/v1/albums/2NbUBAN5Mv7KAacJHOtC49",
+          "id" : "2NbUBAN5Mv7KAacJHOtC49",
+          "images" : [ {
+            "height" : 640,
+            "url" : "https://i.scdn.co/image/ab67616d0000b27352dc468314f87fb73690f638",
+            "width" : 640
+          }, {
+            "height" : 300,
+            "url" : "https://i.scdn.co/image/ab67616d00001e0252dc468314f87fb73690f638",
+            "width" : 300
+          }, {
+            "height" : 64,
+            "url" : "https://i.scdn.co/image/ab67616d0000485152dc468314f87fb73690f638",
+            "width" : 64
+          } ],
+          "name" : "Skinny Dipping",
+          "release_date" : "2021-09-09",
+          "release_date_precision" : "day",
+          "total_tracks" : 1,
+          "type" : "album",
+          "uri" : "spotify:album:2NbUBAN5Mv7KAacJHOtC49"
+        }, {
+          "album_type" : "single",
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/2oX42qP5ineK3hrhBECLmj"
+            },
+            "href" : "https://api.spotify.com/v1/artists/2oX42qP5ineK3hrhBECLmj",
+            "id" : "2oX42qP5ineK3hrhBECLmj",
+            "name" : "Andy Grammer",
+            "type" : "artist",
+            "uri" : "spotify:artist:2oX42qP5ineK3hrhBECLmj"
+          } ],
+          "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/album/4gi9J69znig8ZUb9OhdUCs"
+          },
+          "href" : "https://api.spotify.com/v1/albums/4gi9J69znig8ZUb9OhdUCs",
+          "id" : "4gi9J69znig8ZUb9OhdUCs",
+          "images" : [ {
+            "height" : 640,
+            "url" : "https://i.scdn.co/image/ab67616d0000b2736d7248ad28157dc48cf3a3a5",
+            "width" : 640
+          }, {
+            "height" : 300,
+            "url" : "https://i.scdn.co/image/ab67616d00001e026d7248ad28157dc48cf3a3a5",
+            "width" : 300
+          }, {
+            "height" : 64,
+            "url" : "https://i.scdn.co/image/ab67616d000048516d7248ad28157dc48cf3a3a5",
+            "width" : 64
+          } ],
+          "name" : "Damn It Feels Good To Be Me",
+          "release_date" : "2021-09-08",
+          "release_date_precision" : "day",
+          "total_tracks" : 1,
+          "type" : "album",
+          "uri" : "spotify:album:4gi9J69znig8ZUb9OhdUCs"
+        }, {
+          "album_type" : "album",
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/6d4jrmreCmsenscuieJERc"
+            },
+            "href" : "https://api.spotify.com/v1/artists/6d4jrmreCmsenscuieJERc",
+            "id" : "6d4jrmreCmsenscuieJERc",
+            "name" : "The Band CAMINO",
+            "type" : "artist",
+            "uri" : "spotify:artist:6d4jrmreCmsenscuieJERc"
+          } ],
+          "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/album/1N5ZRHDLAv92FHZ4fRYhCi"
+          },
+          "href" : "https://api.spotify.com/v1/albums/1N5ZRHDLAv92FHZ4fRYhCi",
+          "id" : "1N5ZRHDLAv92FHZ4fRYhCi",
+          "images" : [ {
+            "height" : 640,
+            "url" : "https://i.scdn.co/image/ab67616d0000b2739d77ddd3dfab1a8530f30dee",
+            "width" : 640
+          }, {
+            "height" : 300,
+            "url" : "https://i.scdn.co/image/ab67616d00001e029d77ddd3dfab1a8530f30dee",
+            "width" : 300
+          }, {
+            "height" : 64,
+            "url" : "https://i.scdn.co/image/ab67616d000048519d77ddd3dfab1a8530f30dee",
+            "width" : 64
+          } ],
+          "name" : "The Band CAMINO",
+          "release_date" : "2021-09-10",
+          "release_date_precision" : "day",
+          "total_tracks" : 14,
+          "type" : "album",
+          "uri" : "spotify:album:1N5ZRHDLAv92FHZ4fRYhCi"
+        }, {
+          "album_type" : "album",
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/55EarwWraRQY9diMo9Oeul"
+            },
+            "href" : "https://api.spotify.com/v1/artists/55EarwWraRQY9diMo9Oeul",
+            "id" : "55EarwWraRQY9diMo9Oeul",
+            "name" : "Deb Never",
+            "type" : "artist",
+            "uri" : "spotify:artist:55EarwWraRQY9diMo9Oeul"
+          } ],
+          "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/album/39JWmffb0CchVAr9AMyY7I"
+          },
+          "href" : "https://api.spotify.com/v1/albums/39JWmffb0CchVAr9AMyY7I",
+          "id" : "39JWmffb0CchVAr9AMyY7I",
+          "images" : [ {
+            "height" : 640,
+            "url" : "https://i.scdn.co/image/ab67616d0000b2736d0c7e75e45129e353c22c9a",
+            "width" : 640
+          }, {
+            "height" : 300,
+            "url" : "https://i.scdn.co/image/ab67616d00001e026d0c7e75e45129e353c22c9a",
+            "width" : 300
+          }, {
+            "height" : 64,
+            "url" : "https://i.scdn.co/image/ab67616d000048516d0c7e75e45129e353c22c9a",
+            "width" : 64
+          } ],
+          "name" : "Where Have All the Flowers Gone?",
+          "release_date" : "2021-09-10",
+          "release_date_precision" : "day",
+          "total_tracks" : 8,
+          "type" : "album",
+          "uri" : "spotify:album:39JWmffb0CchVAr9AMyY7I"
+        }, {
+          "album_type" : "album",
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/6niigcazB2JPcpasZfZvq1"
+            },
+            "href" : "https://api.spotify.com/v1/artists/6niigcazB2JPcpasZfZvq1",
+            "id" : "6niigcazB2JPcpasZfZvq1",
+            "name" : "박혜진 Park Hye Jin",
+            "type" : "artist",
+            "uri" : "spotify:artist:6niigcazB2JPcpasZfZvq1"
+          } ],
+          "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/album/17A5C4E71HzHookLBWzjMJ"
+          },
+          "href" : "https://api.spotify.com/v1/albums/17A5C4E71HzHookLBWzjMJ",
+          "id" : "17A5C4E71HzHookLBWzjMJ",
+          "images" : [ {
+            "height" : 640,
+            "url" : "https://i.scdn.co/image/ab67616d0000b273b1af00bbc21ccaad004f9807",
+            "width" : 640
+          }, {
+            "height" : 300,
+            "url" : "https://i.scdn.co/image/ab67616d00001e02b1af00bbc21ccaad004f9807",
+            "width" : 300
+          }, {
+            "height" : 64,
+            "url" : "https://i.scdn.co/image/ab67616d00004851b1af00bbc21ccaad004f9807",
+            "width" : 64
+          } ],
+          "name" : "Before I Die",
+          "release_date" : "2021-09-10",
+          "release_date_precision" : "day",
+          "total_tracks" : 15,
+          "type" : "album",
+          "uri" : "spotify:album:17A5C4E71HzHookLBWzjMJ"
+        }, {
+          "album_type" : "single",
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/1vaQ6v3pOFxAIrFoPrAcom"
+            },
+            "href" : "https://api.spotify.com/v1/artists/1vaQ6v3pOFxAIrFoPrAcom",
+            "id" : "1vaQ6v3pOFxAIrFoPrAcom",
+            "name" : "Ari Lennox",
+            "type" : "artist",
+            "uri" : "spotify:artist:1vaQ6v3pOFxAIrFoPrAcom"
+          } ],
+          "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/album/5lpInBYJiEtNyOXLIa3c9B"
+          },
+          "href" : "https://api.spotify.com/v1/albums/5lpInBYJiEtNyOXLIa3c9B",
+          "id" : "5lpInBYJiEtNyOXLIa3c9B",
+          "images" : [ {
+            "height" : 640,
+            "url" : "https://i.scdn.co/image/ab67616d0000b273c46c77bbb72676a4b7756188",
+            "width" : 640
+          }, {
+            "height" : 300,
+            "url" : "https://i.scdn.co/image/ab67616d00001e02c46c77bbb72676a4b7756188",
+            "width" : 300
+          }, {
+            "height" : 64,
+            "url" : "https://i.scdn.co/image/ab67616d00004851c46c77bbb72676a4b7756188",
+            "width" : 64
+          } ],
+          "name" : "Pressure",
+          "release_date" : "2021-09-10",
+          "release_date_precision" : "day",
+          "total_tracks" : 1,
+          "type" : "album",
+          "uri" : "spotify:album:5lpInBYJiEtNyOXLIa3c9B"
+        }, {
+          "album_type" : "single",
+          "artists" : [ {
+            "external_urls" : {
+              "spotify" : "https://open.spotify.com/artist/6xS5PpBWaVYraexEkEjjXv"
+            },
+            "href" : "https://api.spotify.com/v1/artists/6xS5PpBWaVYraexEkEjjXv",
+            "id" : "6xS5PpBWaVYraexEkEjjXv",
+            "name" : "Maxo Kream",
+            "type" : "artist",
+            "uri" : "spotify:artist:6xS5PpBWaVYraexEkEjjXv"
+          } ],
+          "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/album/0vTDlHYc2iOl6Vwyi0Ld9p"
+          },
+          "href" : "https://api.spotify.com/v1/albums/0vTDlHYc2iOl6Vwyi0Ld9p",
+          "id" : "0vTDlHYc2iOl6Vwyi0Ld9p",
+          "images" : [ {
+            "height" : 640,
+            "url" : "https://i.scdn.co/image/ab67616d0000b273967a3a34e23bdb49deba859b",
+            "width" : 640
+          }, {
+            "height" : 300,
+            "url" : "https://i.scdn.co/image/ab67616d00001e02967a3a34e23bdb49deba859b",
+            "width" : 300
+          }, {
+            "height" : 64,
+            "url" : "https://i.scdn.co/image/ab67616d00004851967a3a34e23bdb49deba859b",
+            "width" : 64
+          } ],
+          "name" : "Big Persona (feat. Tyler, The Creator)",
+          "release_date" : "2021-09-07",
+          "release_date_precision" : "day",
+          "total_tracks" : 1,
+          "type" : "album",
+          "uri" : "spotify:album:0vTDlHYc2iOl6Vwyi0Ld9p"
+        } ],
+        "limit" : 20,
+        "next" : "https://api.spotify.com/v1/browse/new-releases?offset=20&limit=20",
+        "offset" : 0,
+        "previous" : null,
+        "total" : 100
+      }
+    }
+
+  learner_created: true
+- name: src/advisor/View.java
+  visible: true
+  text: |
+    package advisor;
+
+    import com.google.gson.JsonElement;
+    import com.google.gson.JsonObject;
+
+    import java.util.ArrayList;
+    import java.util.List;
+    public class View {
+
+
+        public static void printText(String text){
+            System.out.println(text);
+        }
+
+
+        public static void printAccessToken(String accessToken) {
+            System.out.println("response:");
+
+        }
+
+        public static void printAuthView(){
+            System.out.println();
+
+            System.out.println("use this link to request the access code:");
+            System.out.printf("%s/authorize?client_id=%s&redirect_uri=%s&response_type=code",
+                    SpotifyData.AUTH_SERVER_PATH, SpotifyData.CLIENT_ID, SpotifyData.REDIRECT_URL);
+            System.out.println();
+            System.out.println("waiting for code...");
+        }
+
+        public static void printAccessTokenView() {
+            System.out.println();
+
+            System.out.println("making http request for access_token...");
+            System.out.println("response:");
+        }
+
+
+        public static void printNewAlbums(JsonObject js){
+            System.out.println();
+
+            for (JsonElement item : js.getAsJsonArray("items")){
+                List<String > artists = new ArrayList<>();
+                String albumName = item.getAsJsonObject().get("name").getAsString();
+                String  href = null;
+
+                for (JsonElement artist :item.getAsJsonObject().getAsJsonArray("artists")){
+                    href = item.getAsJsonObject().get("external_urls").getAsJsonObject().get("spotify").getAsString();
+                    artists.add(artist.getAsJsonObject().get("name").getAsString());
+                }
+                System.out.println(albumName + "\n" + artists + "\n" + href + "\n");
+            }
+        }
+
+        public static void printCategories(JsonObject js){
+            System.out.println();
+            for (JsonElement item :js.getAsJsonArray("items")){
+                String categoryName = item.getAsJsonObject().get("name").getAsString();
+                if (categoryName != null)
+                    System.out.println(categoryName);
+            }
+        }
+        public static void printFeatured(JsonObject js){
+            System.out.println();
+            for (JsonElement item :js.getAsJsonArray("items")){
+                String playlistName = item.getAsJsonObject().get("name").getAsString();
+                String href = item.getAsJsonObject().get("external_urls").getAsJsonObject().get("spotify").getAsString();
+
+                if (href != null && playlistName != null);
+                    System.out.println(playlistName + "\n" + href + "\n");
+
+
+            }
+        }
+        public static void printPlaylists(JsonObject playlists){
+            System.out.println();
+
+            for (JsonElement item :playlists.getAsJsonArray("items")){
+                System.out.println(item.getAsJsonObject().get("name").getAsString() +
+                        "\n" + item.getAsJsonObject().get("external_urls").getAsJsonObject().get("spotify").getAsString() + "\n");
+            }
+
+        }
+
+    }
+  learner_created: true
+- name: src/advisor/SpotifyData.java
+  visible: true
+  text: |-
+    package advisor;
+
+    public class SpotifyData {
+        public static String AUTH_SERVER_PATH = "https://accounts.spotify.com";
+        public static final String GET_ACCESS_TOKEN_FROM_URL = "https://accounts.spotify.com/api/token";
+        public static  String REDIRECT_URL = "http://localhost:8080";
+        public static final String CLIENT_SECRET = "b1a2411bbb91493383810b4c7edeaa11";
+        public static String API_PATH = "https://api.spotify.com";
+        public static final String CLIENT_ID = "55baa53664b8400995154bb8f972fa92";
+        public static final String REDIRECT_URL_IN_QUERY_STRING = "http%3A%2F%2Flocalhost%3A8080";
+
+
+
+
+       /* Чтобы получить все категории, используйте https://api.spotify.com/v1/browse/categories
+        Для получения списка воспроизведения, используйте https://api.spotify.com/v1/browse/categories/{category_id}/playlists
+        Для получения новых выпусков, используйте https://api.spotify.com/v1/browse/new-releases
+        Для получения избранных списков воспроизведения, используйте https://api.spotify.com/v1/browse/featured-playlists
+    */
+    }
+
+    //b1a2411bbb91493383810b4c7edeaa11
+    //https://accounts.spotify.com/authorize?client_id=55baa53664b8400995154bb8f972fa92&redirect_uri=http://localhost:8080&response_type=code
+  learner_created: true
+- name: src/advisor/Controller.java
+  visible: true
+  text: |
+    package advisor;
+
+    import com.google.gson.JsonArray;
+    import com.google.gson.JsonElement;
+    import com.google.gson.JsonObject;
+    import com.google.gson.JsonParser;
+    import com.sun.net.httpserver.HttpServer;
+
+    import java.io.IOException;
+    import java.net.InetSocketAddress;
+    import java.net.URI;
+    import java.net.http.HttpClient;
+    import java.net.http.HttpRequest;
+    import java.net.http.HttpResponse;
+    import java.util.ArrayList;
+    import java.util.List;
+
+
+    public class Controller {
+        private static String authCode = null;
+        static String accessToken = "";
+
+
+        public static JsonObject restRequestForSpotify(URI uri){
+            HttpRequest httpRequest = HttpRequest.newBuilder()
+                    .header("Authorization","Bearer " + accessToken)
+                    .uri(uri)
+                    .GET()
+                    .build();
+            try {
+                HttpClient client = HttpClient.newBuilder().build();
+                HttpResponse<String> response = client.send(httpRequest,HttpResponse.BodyHandlers.ofString());
+
+                return  JsonParser.parseString(response.body()).getAsJsonObject();
+
+
+            } catch (IOException | InterruptedException e) {
+                e.printStackTrace();
+            }
+           return null;
+
+        }
+
+        public static void getAccessToken(){
+            View.printAccessTokenView();
+            HttpRequest request = HttpRequest.newBuilder()
+                    .header("Content-Type", "application/x-www-form-urlencoded")
+                    .uri(URI.create(SpotifyData.AUTH_SERVER_PATH + "/api/token"))
+                    .POST(HttpRequest.BodyPublishers.ofString(
+                            "grant_type=authorization_code"
+                            +   "&code=" + authCode
+                            +   "&client_id=" + SpotifyData.CLIENT_ID
+                            +   "&client_secret=" + SpotifyData.CLIENT_SECRET
+                            +   "&redirect_uri=" + SpotifyData.REDIRECT_URL
+                    )).build();
+            try {
+                HttpClient client = HttpClient.newBuilder().build();
+                HttpResponse<String> response = client.send(request,HttpResponse.BodyHandlers.ofString());
+
+                JsonObject jo = JsonParser.parseString(response.body()).getAsJsonObject();
+                accessToken = jo.get("access_token").getAsString();
+                assert response != null;
+
+                System.out.print( "\n---SUCCESS---");
+        }catch (InterruptedException | IOException e) {
+                System.out.println("Error response");
+            }
+
+        }
+
+
+        public static void getAuthCode(){
+            try {
+                View.printAuthView();
+                HttpServer server = HttpServer.create();
+                server.bind(new InetSocketAddress(8080), 0);
+                server.start();
+                server.createContext("/",
+                        exchange -> {
+                            String query = exchange.getRequestURI().getQuery();
+                            String request;
+                            if (query != null && query.contains("code")) {
+                                authCode = query.substring(5);
+                                System.out.println("code received");
+                                request = "Got the code. Return back to your program.";
+                            } else {
+                                request = "Authorization code not found. Try again.";
+                            }
+                            exchange.sendResponseHeaders(200, request.length());
+                            exchange.getResponseBody().write(request.getBytes());
+                            exchange.getResponseBody().close();
+                        });
+
+
+                while (authCode == null) {
+                    Thread.sleep(100);
+                }
+                server.stop(5);
+
+            } catch (IOException | InterruptedException e) {
+                System.out.println("Server error");
+            }
+
+         }
+
+
+
+
+
+
+
+    }
+  learner_created: true
+- name: src/advisor/MusicAdvisor.java
+  visible: true
+  text: |
+    package advisor;
+
+    import com.google.gson.JsonArray;
+    import com.google.gson.JsonElement;
+    import com.google.gson.JsonObject;
+    import com.google.gson.JsonParser;
+
+    import java.io.IOException;
+    import java.net.URI;
+    import java.util.HashMap;
+    import java.util.Map;
+
+    public class MusicAdvisor implements Advisor{
+
+        public static  String REST_PATH_ALL_CATEGORIES =  SpotifyData.API_PATH + "/v1/browse/categories";
+        public static  String REST_PATH_PLAYLISTS = SpotifyData.API_PATH + "/v1/browse/categories/category_id/playlists";
+        public static String REST_PATH_NEW_RELEASES = SpotifyData.API_PATH+ "/v1/browse/new-releases";
+        public static  String REST_PATH_FEATURED_PLAYLISTS = SpotifyData.API_PATH + "/v1/browse/featured-playlists";
+
+        @Override
+        public String newAlbums() {
+            JsonObject response = Controller.restRequestForSpotify(URI.create(REST_PATH_NEW_RELEASES));
+            assert response != null;
+            View.printNewAlbums(response.get("albums").getAsJsonObject());
+
+            return null;
+        }
+
+        @Override
+        public String featured() {
+            JsonObject response = Controller.restRequestForSpotify(URI.create(REST_PATH_FEATURED_PLAYLISTS));
+            assert response != null;
+            View.printFeatured(response.get("playlists").getAsJsonObject());
+            return null;
+        }
+
+        @Override
+        public String categories() {
+            System.out.println(REST_PATH_ALL_CATEGORIES);
+            JsonObject response = Controller.restRequestForSpotify(URI.create(REST_PATH_ALL_CATEGORIES));
+            assert response != null;
+            View.printCategories(response.get("categories").getAsJsonObject());
+            return " ";
+        }
+
+        @Override
+        public String playlists(String nameOfCategory) {
+            JsonObject allCategories = Controller.restRequestForSpotify(URI.create(REST_PATH_ALL_CATEGORIES));
+            Map<String ,String > playlistsId = new HashMap<>();
+            assert allCategories != null;
+            for (JsonElement item : allCategories.get("categories").getAsJsonObject().getAsJsonArray("items")){
+                playlistsId.put(item.getAsJsonObject().get("name").getAsString(),
+                        item.getAsJsonObject().get("id").getAsString());
+            }
+
+            if (playlistsId.containsKey(nameOfCategory)){
+
+                String uri = REST_PATH_PLAYLISTS.replaceFirst("category_id",playlistsId.get(nameOfCategory));
+                JsonObject playlists = Controller.restRequestForSpotify(URI.create(uri));
+
+                assert playlists != null;
+                if (playlists.has("error")){
+                    System.out.println("Specified id doesn't exist");
+                    System.out.println(playlists);
+                    return null;
+                  //  System.out.println("{\"error\":{\"status\":404,\"message\":\"Specified id doesn't exist\"}}");
+                }
+                else View.printPlaylists(playlists.get("playlists").getAsJsonObject());
+            }
+            else System.out.println("Unknown category name.");
+
+
+
+           // "Unknown category name."
+            return null;
+        }
+
+        @Override
+        public String exit() {
+            System.out.println("---GOODBYE!---");
+            return "---GOODBYE!---";
+        }
+
+
+        public String Rplaylists(String categoryName)  {
+            String categoryID = getCategoryId(categoryName);
+            if (categoryID == null) {
+                View.printText("Unknown category name.");
+            }
+            else {
+                String playlistsURL = SpotifyData.API_PATH + "v1/browse/categories/" + categoryID + "/playlists";
+                JsonObject allCategories = Controller.restRequestForSpotify(URI.create(playlistsURL));
+                View.printPlaylists(allCategories.get("playlists").getAsJsonObject());
+
+
+            }
+            return null;
+        }
+
+        private  String getCategoryId(String categoryName){
+            JsonObject allCategories = Controller.restRequestForSpotify(URI.create(REST_PATH_ALL_CATEGORIES));
+            Map<String ,String > playlistsId = new HashMap<>();
+            assert allCategories != null;
+            for (JsonElement item : allCategories.get("categories").getAsJsonObject().getAsJsonArray("items")){
+                playlistsId.put(item.getAsJsonObject().get("name").getAsString(),
+                        item.getAsJsonObject().get("id").getAsString());
+            }
+            if (playlistsId.equals(categoryName)) {
+                return playlistsId.get(categoryName);
+            }
+
+            return null;
+
+        }
+    }
+  learner_created: true
+- name: src/advisor/AuthMusicAdvisorDecorator.java
+  visible: true
+  text: |
+    package advisor;
+
+
+
+    public class AuthMusicAdvisorDecorator extends MusicAdvisorDecorator{
+        private boolean ifAuth = false;
+
+        private final String MESSAGE_IF_NOT_AUTH = "Please, provide access for application.";
+            public AuthMusicAdvisorDecorator(Advisor advisor) {
+            super(advisor);
+        }
+
+        public boolean auth(){
+            Controller.getAuthCode();
+            Controller.getAccessToken();
+            ifAuth = true;
+            return true;
+        }
+
+        @Override
+        public String newAlbums() {
+            if (ifAuth){
+                return super.newAlbums();
+
+            }
+            else {
+                System.out.println(MESSAGE_IF_NOT_AUTH);
+                return MESSAGE_IF_NOT_AUTH;
+            }
+
+
+
+        }
+
+        @Override
+        public String featured() {
+            if (ifAuth){
+                return super.featured();
+            }
+            else {
+                System.out.println(MESSAGE_IF_NOT_AUTH);
+                return MESSAGE_IF_NOT_AUTH;
+            }
+        }
+
+        @Override
+        public String categories() {
+            if (ifAuth){
+                return super.categories();
+            }
+            else {
+                System.out.println(MESSAGE_IF_NOT_AUTH);
+                return MESSAGE_IF_NOT_AUTH;
+            }
+        }
+
+        @Override
+        public String playlists(String nameOfCategory) {
+            if (ifAuth){
+                return super.playlists(nameOfCategory);
+            }
+            else {
+                System.out.println(MESSAGE_IF_NOT_AUTH);
+                return MESSAGE_IF_NOT_AUTH;
+            }
+        }
+
+        @Override
+        public String exit() {
+            return super.exit();
+        }
+
+
+    }
+  learner_created: true
+- name: src/advisor/MusicAdvisorDecorator.java
+  visible: true
+  text: |
+    package advisor;
+
+    public class MusicAdvisorDecorator implements Advisor{
+        private Advisor advisor;
+
+        public MusicAdvisorDecorator(Advisor advisor){
+            this.advisor = advisor;
+        }
+        @Override
+        public String newAlbums() {
+            return advisor.newAlbums();
+        }
+
+        @Override
+        public String featured() {
+            return advisor.featured();
+        }
+
+        @Override
+        public String categories() {
+            return advisor.categories();
+        }
+
+        @Override
+        public String playlists(String nameOfCategory) {
+            return advisor.playlists(nameOfCategory);
+        }
+
+        @Override
+        public String exit() {
+            return advisor.exit();
+        }
+    }
+  learner_created: true
+- name: src/advisor/Advisor.java
+  visible: true
+  text: |
+    package advisor;
+
+    public interface Advisor {
+         String newAlbums();
+         String featured();
+         String categories();
+         String playlists(String nameOfCategory);
+         String exit();
+    }
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/62/stages/339/implement#comment
 status: Unchecked
 record: -1

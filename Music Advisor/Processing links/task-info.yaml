@@ -1159,35 +1159,8 @@ files:
   visible: true
   learner_created: true
 feedback_link: https://hyperskill.org/projects/62/stages/338/implement#comment
-status: Failed
+status: Solved
 feedback:
-  message: |-
-    Wrong answer in test #8
-
-    There are no playlists in correct format on &quot;playlists {name}&quot; action. Make sure you correctly parsed the category name.
-
-    Please find below the output of your program during this failed test.
-    Note that the &#39;&gt;&#39; character indicates the beginning of the input line.
-
-    ---
-
-    Arguments: -access http://127.0.0.1:45678 -resource http://127.0.0.1:56789
-
-    &gt; auth
-
-    use this link to request the access code:
-    http://127.0.0.1:45678/authorize?client_id=55baa53664b8400995154bb8f972fa92&amp;redirect_uri=http://localhost:8080&amp;response_type=code
-    waiting for code...
-    Tester: making requests to redirect uri: http://localhost:8080
-    Tester: done request 1: Authorization code not found. Try again.
-    Tester: done request 2: Authorization code not found. Try again.
-    code received
-    Tester: done request 3: Got the code. Return back to your program.
-
-    making http request for access_token...
-    response:
-
-    ---SUCCESS---&gt; playlists Party Time
-    Specified id doesn&#39;t exist
-  time: Wed, 15 Sep 2021 16:05:43 UTC
+  message: Congratulations!
+  time: Thu, 16 Sep 2021 16:16:32 UTC
 record: 4

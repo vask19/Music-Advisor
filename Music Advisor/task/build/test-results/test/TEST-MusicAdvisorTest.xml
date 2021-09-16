@@ -1,86 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="MusicAdvisorTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-09-15T16:05:20" hostname="HOME-PC" time="21.958">
+<testsuite name="MusicAdvisorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-09-16T16:15:53" hostname="HOME-PC" time="37.906">
   <properties/>
-  <testcase name="start" classname="MusicAdvisorTest" time="21.958">
-    <failure message="java.lang.AssertionError: Wrong answer in test #8&#10;&#10;There are no playlists in correct format on &quot;playlists {name}&quot; action. Make sure you correctly parsed the category name.&#10;&#10;Please find below the output of your program during this failed test.&#10;Note that the '&gt;' character indicates the beginning of the input line.&#10;&#10;---&#10;&#10;Arguments: -access http://127.0.0.1:45678 -resource http://127.0.0.1:56789&#10;&#10;&gt; auth&#10;&#10;use this link to request the access code:&#10;http://127.0.0.1:45678/authorize?client_id=55baa53664b8400995154bb8f972fa92&amp;redirect_uri=http://localhost:8080&amp;response_type=code&#10;waiting for code...&#10;Tester: making requests to redirect uri: http://localhost:8080&#10;Tester: done request 1: Authorization code not found. Try again.&#10;Tester: done request 2: Authorization code not found. Try again.&#10;code received&#10;Tester: done request 3: Got the code. Return back to your program.&#10;&#10;making http request for access_token...&#10;response:&#10;&#10;---SUCCESS---&gt; playlists Party Time&#10;Specified id doesn't exist" type="java.lang.AssertionError">java.lang.AssertionError: Wrong answer in test #8
-
-There are no playlists in correct format on &quot;playlists {name}&quot; action. Make sure you correctly parsed the category name.
-
-Please find below the output of your program during this failed test.
-Note that the '&gt;' character indicates the beginning of the input line.
-
----
-
-Arguments: -access http://127.0.0.1:45678 -resource http://127.0.0.1:56789
-
-&gt; auth
-
-use this link to request the access code:
-http://127.0.0.1:45678/authorize?client_id=55baa53664b8400995154bb8f972fa92&amp;redirect_uri=http://localhost:8080&amp;response_type=code
-waiting for code...
-Tester: making requests to redirect uri: http://localhost:8080
-Tester: done request 1: Authorization code not found. Try again.
-Tester: done request 2: Authorization code not found. Try again.
-code received
-Tester: done request 3: Got the code. Return back to your program.
-
-making http request for access_token...
-response:
-
----SUCCESS---&gt; playlists Party Time
-Specified id doesn't exist
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.hyperskill.hstest.stage.StageTest.start(StageTest.java:155)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
-	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:121)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
-	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
-	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-</failure>
-  </testcase>
+  <testcase name="start" classname="MusicAdvisorTest" time="37.906"/>
   <system-out><![CDATA[?[1;31m
 Start test 1?[0m
 > auth
@@ -212,7 +133,68 @@ making http request for access_token...
 response:
 
 ---SUCCESS---> playlists Party Time
+
+Noite Eletronica
+http://open.spotify.com/user/spotifybrazilian/playlist/4k7EZPI3uKMz4aRRrLVfen
+
+Festa Indie
+http://open.spotify.com/user/spotifybrazilian/playlist/4HZh0C9y80GzHDbHZyX770
+
+> exit
+---GOODBYE!---
+?[1;31m
+Start test 9?[0m
+> playlists Party Time
+Please, provide access for application.
+> exit
+---GOODBYE!---
+?[1;31m
+Start test 10?[0m
+> auth
+
+use this link to request the access code:
+http://127.0.0.1:45678/authorize?client_id=55baa53664b8400995154bb8f972fa92&redirect_uri=http://localhost:8080&response_type=code
+waiting for code...
+Tester: making requests to redirect uri: http://localhost:8080
+Tester: done request 1: Authorization code not found. Try again.
+Tester: done request 2: Authorization code not found. Try again.
+code received
+Tester: done request 3: Got the code. Return back to your program.
+
+making http request for access_token...
+response:
+
+---SUCCESS---> playlists Top Lists
 Specified id doesn't exist
+{"error":{"status":404,"message":"Test unpredictable error message"}}
+> exit
+---GOODBYE!---
+?[1;31m
+Start test 11?[0m
+> auth
+
+use this link to request the access code:
+http://127.0.0.1:45678/authorize?client_id=55baa53664b8400995154bb8f972fa92&redirect_uri=http://localhost:8080&response_type=code
+waiting for code...
+Tester: making requests to redirect uri: http://localhost:8080
+Tester: done request 1: Authorization code not found. Try again.
+Tester: done request 2: Authorization code not found. Try again.
+code received
+Tester: done request 3: Got the code. Return back to your program.
+
+making http request for access_token...
+response:
+
+---SUCCESS---> playlists Party Time
+
+Noite Eletronica
+http://open.spotify.com/user/spotifybrazilian/playlist/4k7EZPI3uKMz4aRRrLVfen
+
+Festa Indie
+http://open.spotify.com/user/spotifybrazilian/playlist/4HZh0C9y80GzHDbHZyX770
+
+> exit
+---GOODBYE!---
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

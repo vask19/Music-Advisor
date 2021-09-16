@@ -129,4 +129,65 @@
 response:
 
 $---SUCCESS---> playlists Party Time
+
+Noite Eletronica
+Nhttp://open.spotify.com/user/spotifybrazilian/playlist/4k7EZPI3uKMz4aRRrLVfen
+
+Festa Indie
+Nhttp://open.spotify.com/user/spotifybrazilian/playlist/4HZh0C9y80GzHDbHZyX770
+
+> exit
+---GOODBYE!---
+[1;31m
+Start test 9[0m
+> playlists Party Time
+)Please, provide access for application.
+> exit
+---GOODBYE!---
+[1;31m
+Start test 10[0m
+> auth
+
++use this link to request the access code:
+ƒhttp://127.0.0.1:45678/authorize?client_id=55baa53664b8400995154bb8f972fa92&redirect_uri=http://localhost:8080&response_type=code
+waiting for code...
+@Tester: making requests to redirect uri: http://localhost:8080
+BTester: done request 1: Authorization code not found. Try again.
+BTester: done request 2: Authorization code not found. Try again.
+code received
+DTester: done request 3: Got the code. Return back to your program.
+
+)making http request for access_token...
+response:
+
+#---SUCCESS---> playlists Top Lists
 Specified id doesn't exist
+G{"error":{"status":404,"message":"Test unpredictable error message"}}
+> exit
+---GOODBYE!---
+[1;31m
+Start test 11[0m
+> auth
+
++use this link to request the access code:
+ƒhttp://127.0.0.1:45678/authorize?client_id=55baa53664b8400995154bb8f972fa92&redirect_uri=http://localhost:8080&response_type=code
+waiting for code...
+@Tester: making requests to redirect uri: http://localhost:8080
+BTester: done request 1: Authorization code not found. Try again.
+BTester: done request 2: Authorization code not found. Try again.
+code received
+DTester: done request 3: Got the code. Return back to your program.
+
+)making http request for access_token...
+response:
+
+$---SUCCESS---> playlists Party Time
+
+Noite Eletronica
+Nhttp://open.spotify.com/user/spotifybrazilian/playlist/4k7EZPI3uKMz4aRRrLVfen
+
+Festa Indie
+Nhttp://open.spotify.com/user/spotifybrazilian/playlist/4HZh0C9y80GzHDbHZyX770
+
+> exit
+---GOODBYE!---
