@@ -2,6 +2,9 @@ package advisor;
 
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.SortedMap;
+import java.util.Stack;
+import java.util.TreeMap;
 import java.util.regex.Pattern;
 
 public class Main {
@@ -16,52 +19,76 @@ public class Main {
 
             }
         }
-        Advisor advisor = new MusicAdvisor();
-        AuthMusicAdvisorDecorator advisorDecorator = new AuthMusicAdvisorDecorator(advisor);
         Scanner scanner = new Scanner(System.in);
-        String result = "";
+        Controller.getAuthCode();
+        Controller.getAccessToken();
+        Stack<String > answers = new Stack<>();
+        SortedMap<String , Integer> map= new TreeMap<>();
 
-       /* advisorDecorator.newAlbums();
-        advisorDecorator.auth();
-        advisorDecorator.newAlbums();
-        advisorDecorator.featured();
-        advisorDecorator.categories();
-        advisorDecorator.playlists("Sleep");
-        advisor.exit();*/
-
-
+        int sw  = 5;
+        String playlistName = "";
+        int page;
         while (true) {
-            String answer = scanner.nextLine();
-            String playlistName = "";
-            if (answer.contains("playlists")){
-                playlistName = answer.substring(10);
 
-                answer = "playlists";
+            String answer = scanner.nextLine();
+            answers.add(answer);
+
+            if (answer.equals("next")){
+
+                answers.pop();
+                answer = answers.peek();
+                map.put(answer,map.get(answer) == null ? 2 : map.get(answer) +1);
+
 
             }
+            if (map.get(answer) != null){
+                page = map.get(answer);
+            }
+            else page = 1;
 
+
+            if (answer.contains("playlists")) {
+                playlistName = answer.substring(10);
+                answer = "playlists";
+            }
+            System.out.println(map);
             switch (answer) {
+                case "next":
+
+                    break;
                 case "exit":
-                    result = advisorDecorator.exit();
+
                     return;
                 case "new":
-                    advisorDecorator.newAlbums();
+
                     break;
                 case "auth":
-                    advisorDecorator.auth();
+
                     break;
                 case "featured":
-                    result = advisorDecorator.featured();
+
                     break;
                 case "categories":
-                    advisorDecorator.categories();
+                    View.printCategories(Controller.categories(),page,sw);
+
                     break;
                 case "playlists":
-                    advisorDecorator.playlists(playlistName);
+                    View.printCategories(Controller.getPlaylistInPage(playlistName),page,sw);
+
             }
-
-
         }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     }

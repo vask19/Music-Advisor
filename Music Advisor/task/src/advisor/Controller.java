@@ -1,11 +1,10 @@
 package advisor;
 
-import com.google.gson.JsonArray;
+
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.sun.net.httpserver.HttpServer;
-
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.URI;
@@ -13,12 +12,128 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.ArrayList;
+import java.util.HashMap;
+
 import java.util.List;
+import java.util.Map;
 
 
 public class Controller {
     private static String authCode = null;
     static String accessToken = "";
+    public static  String REST_PATH_ALL_CATEGORIES =  SpotifyData.API_PATH + "/v1/browse/categories";
+    public static  String REST_PATH_PLAYLISTS = SpotifyData.API_PATH + "/v1/browse/categories/category_id/playlists";
+    public static String REST_PATH_NEW_RELEASES = SpotifyData.API_PATH+ "/v1/browse/new-releases";
+    public static  String REST_PATH_FEATURED_PLAYLISTS = SpotifyData.API_PATH + "/v1/browse/featured-playlists";
+
+
+    public static JsonObject newAlbums() {
+        JsonObject response =restRequestForSpotify(URI.create(REST_PATH_NEW_RELEASES));
+        assert response != null;
+        //View.printNewAlbums(response.get("albums").getAsJsonObject());
+
+        return response.get("albums").getAsJsonObject();
+    }
+
+
+    public static JsonObject featured() {
+        JsonObject response = restRequestForSpotify(URI.create(REST_PATH_FEATURED_PLAYLISTS));
+        assert response != null;
+       // View.printFeatured(response.get("playlists").getAsJsonObject());
+        return response.get("playlists").getAsJsonObject();
+    }
+
+
+
+
+
+
+
+    public static List<String > categories() {
+        List<String > categories = new ArrayList<>();
+        JsonObject response = restRequestForSpotify(URI.create(REST_PATH_ALL_CATEGORIES));
+        assert response != null;
+        for (JsonElement item : response.get("categories").getAsJsonObject().getAsJsonArray("items")) {
+            categories.add(item.getAsJsonObject().get("name").getAsString());
+        }
+        return categories;
+    }
+
+
+
+
+
+
+
+
+
+
+    private static JsonObject  playlists(String nameOfCategory) {
+
+        JsonObject allCategories = restRequestForSpotify(URI.create(REST_PATH_ALL_CATEGORIES));
+        Map<String, String> playlistsId = new HashMap<>();
+        assert allCategories != null;
+        for (JsonElement item : allCategories.get("categories").getAsJsonObject().getAsJsonArray("items")) {
+            playlistsId.put(item.getAsJsonObject().get("name").getAsString(),
+                    item.getAsJsonObject().get("id").getAsString());
+        }
+
+        if (playlistsId.containsKey(nameOfCategory)) {
+
+            String uri = REST_PATH_PLAYLISTS.replaceFirst("category_id", playlistsId.get(nameOfCategory));
+            JsonObject playlists = Controller.restRequestForSpotify(URI.create(uri));
+
+            assert playlists != null;
+            if (playlists.has("error")) {
+                System.out.println("Specified id doesn't exist");
+                System.out.println(playlists);
+                return null;
+            } else {
+                return playlists.get("playlists").getAsJsonObject();
+
+            }
+        }
+
+        else System.out.println("Unknown category name.");
+
+            return null;
+        }
+
+
+    public static List<String>  getPlaylistInPage(String nameOfCategory){
+        JsonObject playlists = playlists(nameOfCategory);
+        List<String > pages = new ArrayList<>();
+        for (JsonElement item :playlists.getAsJsonArray("items")){
+            String page = item.getAsJsonObject().get("name").getAsString() +
+                    "\n" + item.getAsJsonObject().get("external_urls").getAsJsonObject().get("spotify").getAsString() + "\n";
+            pages.add(page);
+        }
+        return pages;
+    }
+
+    public String exit() {
+        System.out.println("---GOODBYE!---");
+        return "---GOODBYE!---";
+    }
+
+    private  String getCategoryId(String categoryName){
+        JsonObject allCategories = restRequestForSpotify(URI.create(REST_PATH_ALL_CATEGORIES));
+        Map<String ,String > playlistsId = new HashMap<>();
+        assert allCategories != null;
+        for (JsonElement item : allCategories.get("categories").getAsJsonObject().getAsJsonArray("items")){
+            playlistsId.put(item.getAsJsonObject().get("name").getAsString(),
+                    item.getAsJsonObject().get("id").getAsString());
+        }
+        if (playlistsId.equals(categoryName)) {
+            return playlistsId.get(categoryName);
+        }
+        return null;
+    }
+
+
+
+
+
 
 
     public static JsonObject restRequestForSpotify(URI uri){

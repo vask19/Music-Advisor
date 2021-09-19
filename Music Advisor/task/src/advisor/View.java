@@ -20,7 +20,6 @@ public class View {
 
     public static void printAuthView(){
         System.out.println();
-
         System.out.println("use this link to request the access code:");
         System.out.printf("%s/authorize?client_id=%s&redirect_uri=%s&response_type=code",
                 SpotifyData.AUTH_SERVER_PATH, SpotifyData.CLIENT_ID, SpotifyData.REDIRECT_URL);
@@ -52,14 +51,33 @@ public class View {
         }
     }
 
-    public static void printCategories(JsonObject js){
+    public static void  printCategories(List<String > categories,int page,int shownOnAPage){
         System.out.println();
-        for (JsonElement item :js.getAsJsonArray("items")){
-            String categoryName = item.getAsJsonObject().get("name").getAsString();
-            if (categoryName != null)
-                System.out.println(categoryName);
+
+        int start = page * shownOnAPage-shownOnAPage;
+        int finish = start + shownOnAPage;
+
+        if (start >= categories.size())
+            return;
+        for (int i = start;i< finish;i++){
+            if (categories.get(i) != null)
+                System.out.println(categories.get(i));
         }
+
+        System.out.printf("---PAGE %d OF %d---",page,categories.size()/shownOnAPage);
+
     }
+
+
+
+
+
+
+
+
+
+
+
     public static void printFeatured(JsonObject js){
         System.out.println();
         for (JsonElement item :js.getAsJsonArray("items")){
