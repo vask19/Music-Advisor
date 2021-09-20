@@ -27,28 +27,40 @@ public class Controller {
     public static  String REST_PATH_FEATURED_PLAYLISTS = SpotifyData.API_PATH + "/v1/browse/featured-playlists";
 
 
-    public static JsonObject newAlbums() {
+    public static List<String> newAlbums() {
         JsonObject response =restRequestForSpotify(URI.create(REST_PATH_NEW_RELEASES));
+        List<String> pages = new ArrayList<>();
         assert response != null;
-        //View.printNewAlbums(response.get("albums").getAsJsonObject());
+        for (JsonElement item : response.get("albums").getAsJsonObject().getAsJsonArray("items")) {
+            List<String> artists = new ArrayList<>();
+            String albumName = item.getAsJsonObject().get("name").getAsString();
+            String href = null;
 
-        return response.get("albums").getAsJsonObject();
+            for (JsonElement artist : item.getAsJsonObject().getAsJsonArray("artists")) {
+                href = item.getAsJsonObject().get("external_urls").getAsJsonObject().get("spotify").getAsString();
+                artists.add(artist.getAsJsonObject().get("name").getAsString());
+            }
+            pages.add(albumName + "\n" + artists + "\n" + href + "\n");
+        }
+
+        return pages;
     }
 
 
-    public static JsonObject featured() {
+    public static List<String > featured() {
         JsonObject response = restRequestForSpotify(URI.create(REST_PATH_FEATURED_PLAYLISTS));
+        List<String > pages = new ArrayList<>();
         assert response != null;
-       // View.printFeatured(response.get("playlists").getAsJsonObject());
-        return response.get("playlists").getAsJsonObject();
+        for (JsonElement item :response.get("playlists").getAsJsonObject().getAsJsonArray("items")) {
+            String playlistName = item.getAsJsonObject().get("name").getAsString();
+            String href = item.getAsJsonObject().get("external_urls").getAsJsonObject().get("spotify").getAsString();
+
+            if (href != null && playlistName != null);
+                pages.add(playlistName + "\n" + href + "\n");
+        }
+
+        return pages;
     }
-
-
-
-
-
-
-
     public static List<String > categories() {
         List<String > categories = new ArrayList<>();
         JsonObject response = restRequestForSpotify(URI.create(REST_PATH_ALL_CATEGORIES));
@@ -58,16 +70,6 @@ public class Controller {
         }
         return categories;
     }
-
-
-
-
-
-
-
-
-
-
     private static JsonObject  playlists(String nameOfCategory) {
 
         JsonObject allCategories = restRequestForSpotify(URI.create(REST_PATH_ALL_CATEGORIES));
@@ -111,11 +113,6 @@ public class Controller {
         return pages;
     }
 
-    public String exit() {
-        System.out.println("---GOODBYE!---");
-        return "---GOODBYE!---";
-    }
-
     private  String getCategoryId(String categoryName){
         JsonObject allCategories = restRequestForSpotify(URI.create(REST_PATH_ALL_CATEGORIES));
         Map<String ,String > playlistsId = new HashMap<>();
@@ -129,13 +126,6 @@ public class Controller {
         }
         return null;
     }
-
-
-
-
-
-
-
     public static JsonObject restRequestForSpotify(URI uri){
         HttpRequest httpRequest = HttpRequest.newBuilder()
                 .header("Authorization","Bearer " + accessToken)
@@ -182,8 +172,6 @@ public class Controller {
         }
 
     }
-
-
     public static void getAuthCode(){
         try {
             View.printAuthView();
@@ -217,11 +205,4 @@ public class Controller {
         }
 
      }
-
-
-
-
-
-
-
 }
